@@ -7,6 +7,8 @@ import HomePage from '@/home/HomePage';
 import AdminPage from '@/admin/AdminPage';
 import LoginPage from '@/login/LoginPage';
 import PrvaStran from '@/home/PrvaStran';
+import ProstovoljciDomacaStran from '@/Prostovoljci/ProstovoljciDomacaStran';
+import DomoviDomacaStran from '@/Domovi/DomoviDomacaStran';
 
 Vue.use(Router);
 
@@ -28,9 +30,19 @@ export const router = new Router({
             component: LoginPage 
         },
         { 
-            path: '/prva', 
+            path: '/vstopnaStran', 
             component: PrvaStran 
         },
+        { 
+            path: '/prostovoljec', 
+            component: ProstovoljciDomacaStran 
+        },
+        { 
+            path: '/domovi', 
+            component: DomoviDomacaStran
+        },
+
+
 
         // otherwise redirect to home
         { path: '*', redirect: '/' }
@@ -45,7 +57,7 @@ router.beforeEach((to, from, next) => {
     if (authorize) {
         if (!currentUser) {
             // not logged in so redirect to login page with the return url
-            return next({ path: '/prva', query: { returnUrl: to.path } });
+            return next({ path: '/vstopnaStran', query: { returnUrl: to.path } });
         }
 
         // check if route is restricted by role

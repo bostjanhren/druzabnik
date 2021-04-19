@@ -24,7 +24,7 @@
             </div>
             <div v-if="error" class="alert alert-danger">{{error}}</div>
         </form>
-        <form action="/prva">
+        <form action="/vstopnaStran">
             <div class="Registracija">
             <button class="btn btn-primary" :disabled="loading">
                 <span class="spinner-border spinner-border-sm" v-show="loading"></span>
