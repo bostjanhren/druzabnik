@@ -11,6 +11,11 @@ import ProstovoljciDomacaStran from '@/Prostovoljci/ProstovoljciDomacaStran';
 import DomoviDomacaStran from '@/Domovi/DomoviDomacaStran';
 import vpisProstovoljciPage from '@/Prostovoljci/vpisProstovoljciPage';
 import registracijaProstovoljciPage from '@/Prostovoljci/registracijaProstovoljciPage';
+import prostovoljciInboxPage from '@/Prostovoljci/prostovoljciInboxPage';
+import prostovoljciDomaStran from '@/Prostovoljci/prostovoljciDomaStran';
+import prostovoljciProfilePage from '@/Prostovoljci/prostovoljciProfilePage';
+import prostovoljciInfoZaDomPage from '@/Prostovoljci/prostovoljciInfoZaDomPage';
+import prostovoljciRegistracijaZaDomPage from '@/Prostovoljci/prostovoljciRegistracijaZaDomPage';
 
 
 Vue.use(Router);
@@ -53,6 +58,32 @@ export const router = new Router({
             path: '/registracijaProstovoljci', 
             component: registracijaProstovoljciPage
         },
+
+        { 
+            path: '/prostovoljciInbox', 
+            component: prostovoljciInboxPage
+        },
+
+        { 
+            path: '/prostovoljciDoma', 
+            component: prostovoljciDomaStran
+        },
+
+        { 
+            path: '/prostovoljciProfile', 
+            component: prostovoljciProfilePage
+        },
+
+        { 
+            path: '/prostovoljciInfoZaDom', 
+            component: prostovoljciInfoZaDomPage
+        },
+
+        { 
+            path: '/prostovoljciRegistracijaDom', 
+            component: prostovoljciRegistracijaZaDomPage
+        },
+
 
         // otherwise redirect to home
         { path: '*', redirect: '/' }

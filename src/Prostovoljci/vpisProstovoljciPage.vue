@@ -63,11 +63,11 @@ export default {
     created () {
         // redirect to home if already logged in
         if (authenticationService.currentUserValue) { 
-            return router.push('/');
+            return router.push('/prostovoljciDoma');
         }
 
         // get return url from route parameters or default to '/'
-        this.returnUrl = this.$route.query.returnUrl || '/';
+        this.returnUrl = this.$route.query.returnUrl || '/prostovoljciDoma';
     },
     methods: {
         onSubmit () {
