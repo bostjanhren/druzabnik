@@ -9,6 +9,9 @@ import LoginPage from '@/login/LoginPage';
 import PrvaStran from '@/home/PrvaStran';
 import ProstovoljciDomacaStran from '@/Prostovoljci/ProstovoljciDomacaStran';
 import DomoviDomacaStran from '@/Domovi/DomoviDomacaStran';
+import vpisProstovoljciPage from '@/Prostovoljci/vpisProstovoljciPage';
+import registracijaProstovoljciPage from '@/Prostovoljci/registracijaProstovoljciPage';
+
 
 Vue.use(Router);
 
@@ -41,8 +44,15 @@ export const router = new Router({
             path: '/domovi', 
             component: DomoviDomacaStran
         },
-
-
+        { 
+            path: '/vpisProstovoljci', 
+            component: vpisProstovoljciPage
+        },
+ 
+        { 
+            path: '/registracijaProstovoljci', 
+            component: registracijaProstovoljciPage
+        },
 
         // otherwise redirect to home
         { path: '*', redirect: '/' }
