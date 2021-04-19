@@ -16,6 +16,7 @@ import prostovoljciDomaStran from '@/Prostovoljci/prostovoljciDomaStran';
 import prostovoljciProfilePage from '@/Prostovoljci/prostovoljciProfilePage';
 import prostovoljciInfoZaDomPage from '@/Prostovoljci/prostovoljciInfoZaDomPage';
 import prostovoljciRegistracijaZaDomPage from '@/Prostovoljci/prostovoljciRegistracijaZaDomPage';
+import prostovoljciMessagePage from '@/Prostovoljci/prostovoljciMessagePage';
 
 
 Vue.use(Router);
@@ -82,6 +83,11 @@ export const router = new Router({
         { 
             path: '/prostovoljciRegistracijaDom', 
             component: prostovoljciRegistracijaZaDomPage
+        },
+
+        { 
+            path: '/prostovoljciMessage', 
+            component:  prostovoljciMessagePage
         },
 
 
