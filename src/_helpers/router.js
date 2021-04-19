@@ -16,10 +16,8 @@ import prostovoljciDomaStran from '@/Prostovoljci/prostovoljciDomaStran';
 import prostovoljciProfilePage from '@/Prostovoljci/prostovoljciProfilePage';
 import prostovoljciInfoZaDomPage from '@/Prostovoljci/prostovoljciInfoZaDomPage';
 import prostovoljciRegistracijaZaDomPage from '@/Prostovoljci/prostovoljciRegistracijaZaDomPage';
-import DomoviLogIn from '@/Domovi/DomoviLogIn';
-import DomoviRegistracije from '@/Domovi/DomoviRegistracija';
-import DomoviProfilnaStran from '@/Domovi/DomoviProfilnaStran';
-import DomoviTermini from '@/Domovi/DomoviTermini';
+import prostovoljciMessagePage from '@/Prostovoljci/prostovoljciMessagePage';
+
 
 Vue.use(Router);
 
@@ -86,25 +84,10 @@ export const router = new Router({
             path: '/prostovoljciRegistracijaDom', 
             component: prostovoljciRegistracijaZaDomPage
         },
-        {
-            path: '/prijavadom',
-            component:DomoviLogIn
-        },
-        {
-            path: '/registracijadom',
-            component:DomoviRegistracije
-        },
-        {
-            path: '/domacastrandom',
-            component:DomoviDomacaStran
-        },
-        {
-            path: '/profilnastrandom',
-            component:DomoviProfilnaStran
-        },
-        {
-            path: '/domdolocitermin',
-            component:DomoviTermini
+
+        { 
+            path: '/prostovoljciMessage', 
+            component:  prostovoljciMessagePage
         },
 
 
