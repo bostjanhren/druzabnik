@@ -6,6 +6,7 @@ import { Role } from '@/_helpers';
 import HomePage from '@/home/HomePage';
 import AdminPage from '@/admin/AdminPage';
 import LoginPage from '@/login/LoginPage';
+import PrvaStran from '@/home/PrvaStran';
 
 Vue.use(Router);
 
@@ -26,6 +27,10 @@ export const router = new Router({
             path: '/login', 
             component: LoginPage 
         },
+        { 
+            path: '/prva', 
+            component: PrvaStran 
+        },
 
         // otherwise redirect to home
         { path: '*', redirect: '/' }
@@ -36,11 +41,11 @@ router.beforeEach((to, from, next) => {
     // redirect to login page if not logged in and trying to access a restricted page
     const { authorize } = to.meta;
     const currentUser = authenticationService.currentUserValue;
-
+    
     if (authorize) {
         if (!currentUser) {
             // not logged in so redirect to login page with the return url
-            return next({ path: '/login', query: { returnUrl: to.path } });
+            return next({ path: '/prva', query: { returnUrl: to.path } });
         }
 
         // check if route is restricted by role

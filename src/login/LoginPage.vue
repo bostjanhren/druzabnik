@@ -24,8 +24,20 @@
             </div>
             <div v-if="error" class="alert alert-danger">{{error}}</div>
         </form>
+        <form action="/prva">
+            <div class="Registracija">
+            <button class="btn btn-primary" :disabled="loading">
+                <span class="spinner-border spinner-border-sm" v-show="loading"></span>
+                <span>Registracija</span>
+            </button>
+            </div>
+        </form>
+        
     </div>
+    
 </template>
+
+
 
 <script>
 import { required } from 'vuelidate/lib/validators';
