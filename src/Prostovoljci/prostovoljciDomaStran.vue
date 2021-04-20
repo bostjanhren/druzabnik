@@ -1,12 +1,12 @@
 <template>
     <div>
-        <h1>DOMA</h1> 
+        <h1>Domaca stran</h1> 
 
         <form action="/prostovoljciInbox">
             <div class="form-group">
             <button class="btn btn-primary" :disabled="loading">
                 <span class="spinner-border spinner-border-sm" v-show="loading"></span>
-                <span>Sporocila</span>
+                <span>Nabiralnik</span>
             </button>
             </div>
         </form>
@@ -33,7 +33,7 @@
             <div class="form-group">
             <button class="btn btn-primary" :disabled="loading">
                 <span class="spinner-border spinner-border-sm" v-show="loading"></span>
-                <span>Izpis</span>
+                <span>Odjava</span>
             </button>
             </div>
         </form>

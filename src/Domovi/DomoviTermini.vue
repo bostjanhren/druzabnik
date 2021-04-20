@@ -35,5 +35,12 @@
     <form action="/domacastrandom">
         <button type="submit" class="btn btn-primary">Shrani spremembe</button>
     </form>
+    
+    <br>
+
+    <form action="/novTermin">
+        <button type="submit" class="btn btn-primary">Nov Termin</button>
+    </form>
+
     </div>
 </template>

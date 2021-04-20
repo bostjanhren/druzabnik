@@ -21,6 +21,10 @@ import DomoviLogIn from '@/Domovi/DomoviLogIn';
 import DomoviRegistracije from '@/Domovi/DomoviRegistracija';
 import DomoviProfilnaStran from '@/Domovi/DomoviProfilnaStran';
 import DomoviTermini from '@/Domovi/DomoviTermini';
+import DomoviNabiralnik from '@/Domovi/DomoviNabiralnik';
+import instancaChata from '@/Chat/instancaChata';
+import DomoviNovTermin from '@/Domovi/DomoviNovTermin';
+import instancaChataProstovoljec from '@/Chat/instancaChataProstovoljec';
 
 
 Vue.use(Router);
@@ -112,6 +116,22 @@ export const router = new Router({
         {
             path: '/domdolocitermin',
             component:DomoviTermini
+        },
+        {
+            path: '/nabiralnikdom',
+            component:DomoviNabiralnik
+        },
+        {
+            path: '/instancaSporocila',
+            component:instancaChata
+        },
+        {
+            path: '/novTermin',
+            component:DomoviNovTermin
+        },
+        {
+            path: '/instancaSporocilaProstovoljec',
+            component:instancaChataProstovoljec
         },
 
         // otherwise redirect to home
