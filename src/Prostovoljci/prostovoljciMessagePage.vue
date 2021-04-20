@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Rezerviraj</h1>
+        <h1>Sporocilo</h1>
 
          <form action="/prostovoljciInbox">
             <div class="form-group">
@@ -13,8 +13,8 @@
 
         <form>
             <div class="form-group">
-             <label for="Porocila">Porocilo</label>
-             <input name="Porocila" v-model="firstName" placeholder="Porocila">
+             <label for="Sporocilo">Sporocilo</label>
+             <input name="Sporocilo" v-model="firstName" placeholder="Sporocilo">
             </div>
         </form>
 
