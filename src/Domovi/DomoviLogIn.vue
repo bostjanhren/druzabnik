@@ -5,6 +5,8 @@
 
         <div class = "underbar"> 
 
+            <label class= "prijavaDom">Prijava Domovi</label>
+
             <form action = "/domacastrandom">
                 <div class="E-mail">
                     <label class= "email-text" for="exampleInputEmail1">E-poštni naslov</label>
@@ -18,7 +20,7 @@
             </form>
             <br>
             <form action = "/registracijadom">
-                <label class= "registracija-text" for="exampleInputPassword1">Ali še niste uporabnik?</label>
+                <label class= "registracija-text">Ali še niste uporabnik?</label>
                 <button id="btnRegistracija" type="submit">Registracija</button>
             </form>
             <form action = "/">

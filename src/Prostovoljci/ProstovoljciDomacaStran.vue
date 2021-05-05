@@ -1,21 +1,32 @@
 <template>
-    <div>
-        <h1>Prostovoljci Domaca stran</h1>
-        <form action="/vpisProstovoljci">
-            <div class="form-group">
-            <button class="btn btn-primary" :disabled="loading">
-                <span class="spinner-border spinner-border-sm" v-show="loading"></span>
-                <span>Vpis</span>
-            </button>
+<div class = "loginProstovoljci">
+
+    <div class = "topbar"></div>
+
+    <div class = "underbar"> 
+
+        <label class= "prijavaProstovoljci">Prijava Prostovoljci</label>
+            
+        <form action = "/prostovoljciDoma">
+            <div class="E-mail">
+                <label class= "email-text" for="exampleInputEmail1">E-poštni naslov</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Vnesi email">
             </div>
+            <div class="Geslo">
+                <label class= "geslo-text" for="exampleInputPassword1">Geslo</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Geslo">
+            </div>
+            <button id ="btnPrijava" type="submit">Prijava</button>
         </form>
-         <form action="/registracijaProstovoljci">
-            <div class="form-group">
-            <button class="btn btn-primary" :disabled="loading">
-                <span class="spinner-border spinner-border-sm" v-show="loading"></span>
-                <span>Registracija</span>
-            </button>
-            </div>
+        <br>
+        <form action = "/registracijaProstovoljci">
+            <label class= "registracija-text" for="exampleInputPassword1">Ali še niste uporabnik?</label>
+            <button id = "btnRegistracija" type="submit">Registracija</button>
+        </form>
+
+        <form action = "/">
+                <button id="btnNazaj2" type="submit">Nazaj</button>
         </form>
     </div>
+</div>
 </template>
