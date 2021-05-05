@@ -1,70 +1,185 @@
-.prvaStranStil{
-    width: 100vw;
-    height: 100vh;
+@media only screen and (min-width: 701px) {
+    .prvaStranStil{
+        width: 100vw;
+        height: 100vh;
+        
+    }
     
-}
-
-.topbar{
-    overflow: visible;
-    top: 0;
-
+    .topbar{
+        overflow: visible;
+        top: 0;
     
-    width: 100%;
-    height: 25vh;
+        
+        width: 100%;
+        height: 20vh;
+        
+        position: fixed;
+        background-color: white;
+        background-image: url('../resources/druzabnik_digonala.png');
+        background-repeat: no-repeat;
+        background-size: auto 25vh;
+        background-position: center;
+    }
     
-    position: fixed;
-    background-color: white;
-    background-image: url('../resources/druzabnik_digonala.png');
-    background-repeat: no-repeat;
-    background-size: auto 25vh;
-    background-position: center;
-}
-
-.underbar{
-    width: 100%;
-    height: 100%;
-
-    padding-top: 25vh;
-    background-image: url('../resources/main_image_klopca.jpg');
-    background-repeat: no-repeat;
-    background-size: auto 100vh;
-    background-position: center; 
-}
-
-.credits{
-    position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   background-color: rgb(255, 255, 255);
-   color: rgb(23, 59, 94);
-   text-align: center;
-}
-
-#prvaForm1{
-    padding-top: 1em;
+    .underbar{
+        width: 100%;
+        height: 100%;
     
-}
-#prvaForm2{
-    padding-top: 1em;
-}
+        padding-top: 25vh;
+        background-image: url('../resources/main_image_klopca.jpg');
+        background-repeat: no-repeat;
+        background-size: auto 175vh;
+        background-position: center; 
+    }
+    
+    .credits{
+        position: fixed;
+       left: 0;
+       bottom: 0;
+       width: 100%;
+       background-color: rgb(255, 255, 255);
+       color: rgb(23, 59, 94);
+       text-align: center;
+    }
+    #prvaForm1{
+        padding-top: 1em;
+        
+    }
+    #prvaForm2{
+        padding-top: 1em;
+    }
+    
+    #descriptionText{
+        color: white;
+        font-weight: bold;
+        position: relative;top:-5vh;
+        font-size: 1em;
+        margin-top: 23.5vh;
+        text-align: center;
+    }
+    
+    #prvaStranButton1{
+        background-color: #41b0cd;
+        color: white;
+        position: relative;top:-5vh;
+        margin-left: 35vw;
+        width: 30vw;
+        height: 5vh;
+        border-radius: 10px;
+        border-color:white;
+    }
+    #prvaStranButton1:hover{
+        background: #173b5e ;
+        cursor: pointer;
+    }
+    
+    #prvaStranButton2{
+        background-color: #41b0cd;
+        color: white;
+        position: relative;top:-5vh;
+        margin-left: 35vw;
+        width: 30vw;
+        height: 5vh;
+        border-radius: 10px;
+        border-color:white;
+    }
+    #prvaStranButton2:hover{
+        background: #173b5e;
+        cursor: pointer;
+    }
+  }
 
-#descriptionText{
-    color: white;
-    font-weight: bold;
-    font-size: 1em;
-    margin-top: 23.5vh;
-    text-align: center;
-}
 
-#prvaStranButton1{
-    margin-left: 30vw;
-    margin-right: 30vw;
-    width: 40vw;
-}
 
-#prvaStranButton2{
-    margin-left: 30vw;
-    margin-right: 30vw;
-    width: 40vw;
-}
+
+
+
+
+@media only screen and (max-width: 700px) {
+    .prvaStranStil{
+        width: 100vw;
+        height: 100vh;
+        
+    }
+    
+    .topbar{
+        overflow: visible;
+        top: 0;
+    
+        
+        width: 100%;
+        height: 20vh;
+        
+        position: fixed;
+        background-color: white;
+        background-image: url('../resources/druzabnik_digonala.png');
+        background-repeat: no-repeat;
+        background-size: auto 25vh;
+        background-position: center;
+    }
+    
+    .underbar{
+        width: 100%;
+        height: 100%;
+    
+        padding-top: 25vh;
+        background-image: url('../resources/main_image_klopca.jpg');
+        background-repeat: no-repeat;
+        background-size: auto 100vh; 
+        background-position: center; 
+    }
+    
+    .credits{
+        position: fixed;
+       left: 0;
+       bottom: 0;
+       width: 100%;
+       background-color: rgb(255, 255, 255);
+       color: rgb(23, 59, 94);
+       text-align: center;
+    }
+    #prvaForm1{
+        padding-top: 1em;
+        
+    }
+    #prvaForm2{
+        padding-top: 1em;
+    }
+    
+    #descriptionText{
+        color: white;
+        font-weight: bold;
+        position: relative;top:-5vh;
+        font-size: 1em;
+        margin-top: 23.5vh;
+        text-align: center;
+    }
+    
+    #prvaStranButton1{
+        background-color: #173b5e;
+        color: white;
+        position: relative;top:-5vh;
+        margin-left: 35vw;
+        width: 30vw;
+        height: 5vh;
+        border-radius: 10px;
+    }
+    #prvaStranButton1:hover{
+        background: #41b0cd;
+        cursor: pointer;
+    }
+    
+    #prvaStranButton2{
+        background-color: #173b5e;
+        color: white;
+        position: relative;top:-5vh;
+        margin-left: 35vw;
+        width: 30vw;
+        height: 5vh;
+        border-radius: 10px;
+    }
+    #prvaStranButton2:hover{
+        background: #41b0cd;
+        cursor: pointer;
+    }
+  }
