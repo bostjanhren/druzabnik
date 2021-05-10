@@ -16,9 +16,32 @@
         </div>
 
         <div class = "underBarProstovoljci"> 
-            <span class="text">V-FOR...isce po dodanih lokacijah</span>
+            <div v-for="blog in blogs" v-bind:key="blog" class="for-loop"> 
+                <h2>{{ blog.homeName }}</h2>
+                <div>
+                    <b-button v-b-toggle="'accordison-' + blog.homeName" variant="info">{{ blog.homeName }}</b-button>
+                    <b-collapse :id="'accordison-' + blog.homeName" class="mt-2">
+                        <b-card>
+                            <p class="card-text">colapse content</p>
+                        </b-card>
+                    </b-collapse>
+                </div>
+            </div>
         
         </div> 
     </div>
 </template>
+
+<script>
+    export default {
+        data: () => ({
+             blogs:[]
+        }),
+        created(){
+            this.$http.get('https://druzabnikapi.herokuapp.com/homes').then(function(data){
+                this.blogs = data.body;
+            })
+        }
+    }
+</script>
 

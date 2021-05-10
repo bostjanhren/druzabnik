@@ -38,19 +38,23 @@
     </v-app-bar>
 
     <v-main>
+      <prostovoljciDomaStran/>
       <HelloWorld/>
+      
     </v-main>
   </v-app>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld';
+import prostovoljciDomaStran from '.Prostovoljci/prostovoljciDomaStran.vue'
 
 export default {
   name: 'App',
 
   components: {
     HelloWorld,
+    prostovoljciDomaStran
   },
 
   data: () => ({

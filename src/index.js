@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Vuelidate from 'vuelidate';
 import Vuetify from 'vuetify'
 import {BootstrapVue, IconsPlugin} from 'bootstrap-vue'
+import VueResource from 'vue-resource';
 
 import { router } from './_helpers';
 import App from './app/App';
@@ -14,7 +15,7 @@ Vue.use(Vuelidate);
 Vue.use(Vuetify)
 Vue.use(BootstrapVue)
 Vue.use(IconsPlugin)
-
+Vue.use(VueResource)
 
 
 new Vue({
