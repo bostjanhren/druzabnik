@@ -6,6 +6,7 @@
 import { authenticationService } from '@/_services';
 import { router, Role } from '@/_helpers';
 
+
 export default {
     name: 'app',
     data () {
