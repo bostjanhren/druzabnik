@@ -17,9 +17,8 @@
 
         <div class = "underBarProstovoljci"> 
             <div v-for="blog in blogs" v-bind:key="blog" class="for-loop"> 
-                <h2>{{ blog.homeName }}</h2>
                 <div>
-                    <b-button v-b-toggle="'accordison-' + blog.homeName" variant="info">{{ blog.homeName }}</b-button>
+                    <b-button class="homesBtn" v-b-toggle="'accordison-' + blog.homeName" variant="info">{{ blog.homeName }}</b-button>
                     <b-collapse :id="'accordison-' + blog.homeName" class="mt-2">
                         <b-card>
                             <p class="card-text">colapse content</p>
