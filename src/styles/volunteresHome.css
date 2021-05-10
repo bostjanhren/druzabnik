@@ -16,7 +16,7 @@
         background-color: white;
         background-image: url('../resources/druzabnik_smajli_blue.png');
         background-repeat: no-repeat;
-        background-size: auto 15vh;
+        background-size: auto 20vh;
         background-position: left;
     }
     .underBarProstovoljci{
@@ -46,7 +46,39 @@
       width: 100vw;
       margin-top: 0.7vh;
       height: 8vh;
+      background-color: #173b5e;
+      border-color:white;
     }
+    .homesBtn:hover{
+      background: #41b0cd;
+      cursor: pointer;
+    }
+    .btnHomeSelect{
+      width: 10vw;
+      height: 4vh;
+      border-radius: 10px;
+      border-color:white;
+      background-color: #41b0cd;
+      color: white;
+    }
+    .btnHomeSelect:hover{
+      background: #173b5e;
+      cursor: pointer;
+  }
+  .accordison-Velenje{
+    height: 60vh;
+    background-image: url('../resources/DomUpokojencevVelenje.jpg');
+    background-size: auto 125vh;
+    background-position: bottom;
+    
+  }
+  .accordison-Kranj{
+    height: 60vh;
+    background-image: url('../resources/DomUpokojencevKranj.png');
+    background-size: auto 60vh;
+    background-position: center;
+    
+  }
 }
 
 

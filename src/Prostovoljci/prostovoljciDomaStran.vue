@@ -18,11 +18,12 @@
         <div class = "underBarProstovoljci"> 
             <div v-for="blog in blogs" v-bind:key="blog" class="for-loop"> 
                 <div>
-                    <b-button class="homesBtn" v-b-toggle="'accordison-' + blog.homeName" variant="info">{{ blog.homeName }}</b-button>
-                    <b-collapse :id="'accordison-' + blog.homeName" class="mt-2">
-                        <b-card>
-                            <p class="card-text">colapse content</p>
-                        </b-card>
+                    <b-button class="homesBtn" v-b-toggle="'accordison-' + blog.homeName">{{ blog.homeName }}</b-button>
+                    <b-collapse :id="'accordison-' + blog.homeName" :class="'accordison-' + blog.homeName">
+                        <p >colapse content</p>
+                        <form action = "">
+                            <button class = "btnHomeSelect" type="submit">Izberi</button>
+                        </form>
                     </b-collapse>
                 </div>
             </div>
