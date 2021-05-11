@@ -80,6 +80,16 @@
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
         border-style: solid;
+        background-color: #153d60;
+        color:white;
+    }
+    #newMessage #tekstPoslji:hover{
+        height: 5vh;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-style: solid;
+        background-color: #43b1cc;
+        color:white;
     }
 
 }
