@@ -78,7 +78,7 @@ export const router = new Router({
         },
 
         { 
-            path: '/prostovoljciInfoZaDom', 
+            path: '/prostovoljciInfoZaDom/:id',
             component: prostovoljciInfoZaDomPage
         },
 
