@@ -36,21 +36,29 @@
         background-color: #43b1cc;
         color:white;
         word-wrap: break-word;
-        width: 40vw;
+        width: 45vw;
         float:left;
         clear:both;
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        padding-right: 2vw;
+        padding-left: 2vw;
+        padding-top: 0.5vw;
+        padding-bottom: 0.5vw;
     }
     .messageRight{
         background-color: #153d60;
         color:white;
         word-wrap: break-word;
-        width: 40vw;
+        width: 45vw;
         float:right;
         clear: both;
-        border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        padding-right: 2vw;
+        padding-left: 2vw;
+        padding-top: 0.5vw;
+        padding-bottom: 0.5vw;
     }
 }
 
