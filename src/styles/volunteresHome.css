@@ -54,30 +54,44 @@
       cursor: pointer;
     }
     .btnHomeSelect{
-      width: 10vw;
-      height: 4vh;
+      width: 15vw;
+      height: 5vh;
       border-radius: 10px;
       border-color:white;
       background-color: #41b0cd;
       color: white;
+      margin-top: 25vh;
+      position: center;
     }
     .btnHomeSelect:hover{
       background: #173b5e;
       cursor: pointer;
   }
   .accordison-Velenje{
-    height: 60vh;
+    height: 45vh;
     background-image: url('../resources/DomUpokojencevVelenje.jpg');
-    background-size: auto 125vh;
+    background-size: auto 115vh;
     background-position: bottom;
     
   }
   .accordison-Kranj{
-    height: 60vh;
+    height: 45vh;
     background-image: url('../resources/DomUpokojencevKranj.png');
-    background-size: auto 60vh;
+    background-size: auto 45vh;
     background-position: center;
     
+  }
+  .HomeNameText{
+    font-size: 65px;
+    color: #173b5e;
+    font-weight: 600;
+    text-align: center;
+  }
+  .HomeNameText{
+    font-size: 65px;
+    color: #173b5e;
+    font-weight: 600;
+    text-align: center;
   }
 }
 
