@@ -1,4 +1,9 @@
 @media only screen and (min-width: 701px) {
+    #prostovoljciMessageStil{
+        width:100%;
+        height:200vh;
+    }
+
     .topBarProstovoljci{
         overflow: visible;
 
@@ -26,7 +31,7 @@
             padding-top: 20vh;
     
             background-repeat: no-repeat;
-            background-size: 100vw 100vh;
+            background-size: 100vw 100%;
             background-position: center; 
             background-color: #487a9d;
     }
@@ -95,12 +100,22 @@
 }
 
 @media only screen and (max-width: 700px) {
+
+    .headerHomeVol{
+        font-size: 5vw;
+    }
+
+    #prostovoljciMessageStil{
+        width:100%;
+        height:200vh;
+    }
+
     .topBarProstovoljci{
         overflow: visible;
 
         
         width: 100%;
-        height: 15vh;
+        height: 20vh;
         
         position: fixed;
         background-color: white;
@@ -109,6 +124,12 @@
         background-size: auto 20vh;
         background-position: left;
     }
+
+    #chatTitle{
+        text-align: center;
+        margin-bottom: 7vh;
+    }
+
     .underBarProstovoljciChat{
         width: 100%;
             height: 100%;
@@ -116,9 +137,75 @@
             padding-top: 20vh;
     
             background-repeat: no-repeat;
-            background-size: 100vw 100vh;
+            background-size: 100vw 100%;
             background-position: center; 
             background-color: #487a9d;
     }
+
+
+    .messageLeft{
+        background-color: #43b1cc;
+        color:white;
+        word-wrap: break-word;
+        width: 60vw;
+        float:left;
+        clear:both;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        padding-right: 2vw;
+        padding-left: 2vw;
+        padding-top: 0.5vw;
+        padding-bottom: 0.5vw;
+        margin-top: 1vh;
+    }
+    .messageRight{
+        background-color: #153d60;
+        color:white;
+        word-wrap: break-word;
+        width: 60vw;
+        float:right;
+        clear: both;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        padding-right: 2vw;
+        padding-left: 2vw;
+        padding-top: 0.5vw;
+        padding-bottom: 0.5vw;
+        margin-top: 1vh;
+    }
+
+    
+
+    #newMessage{
+        float:right;
+        clear: both;
+        margin-right: 20vw;
+        margin-top:8vh;
+    }
+
+    #newMessage #tekst{
+        height: 5vh;
+        width:20vw;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-style: solid;
+    }
+    #newMessage #tekstPoslji{
+        height: 5vh;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-style: solid;
+        background-color: #153d60;
+        color:white;
+    }
+    #newMessage #tekstPoslji:hover{
+        height: 5vh;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-style: solid;
+        background-color: #43b1cc;
+        color:white;
+    }
+
 
 }

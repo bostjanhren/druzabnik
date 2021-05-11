@@ -1,5 +1,5 @@
 <template>
-    <div class = "loginHomePage">
+    <div id = "prostovoljciMessageStil">
 
         <div class = "topBarProstovoljci">
             <h1 class="headerHomeVol">Sporočila</h1> 
@@ -20,15 +20,15 @@
 
             <div id = "conversation">
                 <div v-for="message in messagesDisp" v-bind:key="message" class="for-loop-messages"> 
-                    <div v-if="message.fromid == '609260f8d6b89a00157e97e3'">
-                        <div class="messageRight">
+                    <div v-if="message.fromid == '609260f8d6b89a00157e97e3'" class="messageRight">
+                        
                             {{message.text}}
-                        </div>
+                        
                     </div>
-                    <div v-else>
-                        <div class="messageLeft">
+                    <div v-else class="messageLeft">
+                        
                             {{message.text}}
-                        </div>
+                        
                     </div>
                 </div>
             </div>
