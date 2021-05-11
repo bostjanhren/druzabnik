@@ -19,7 +19,7 @@
             <h2>Pogovori</h2>
             <div v-for="contact in contacts" v-bind:key="contact" class="for-loop-contacts"> 
                 <div>
-                    <b-button class="contactBtn" v-b-toggle="'gumbkontakt-' + contact.id">{{ contact.homeName }}</b-button>
+                    <b-button href="/prostovoljciMessage" class="contactBtn" v-b-toggle="'gumbkontakt-' + contact.id">{{ contact.homeName }}</b-button>
                 </div>
             </div>
         </div> 
@@ -27,7 +27,6 @@
 </template>
 
 <script>
-    import { handleResponse, requestOptions } from '../_helpers';
     export default {
         data: () => ({
              contacts:[]
