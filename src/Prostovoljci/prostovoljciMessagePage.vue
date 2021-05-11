@@ -18,7 +18,7 @@
         <div class = "underBarProstovoljciChat"> 
             <h2 id="chatTitle">Pogovor: Kranj</h2>
 
-            <div>
+            <div id = "conversation">
                 <div v-for="message in messagesDisp" v-bind:key="message" class="for-loop-messages"> 
                     <div v-if="message.fromid == '609260f8d6b89a00157e97e3'">
                         <div class="messageRight">
@@ -32,6 +32,10 @@
                     </div>
                 </div>
             </div>
+            <form class = "form-inline" id = "newMessage" action="placeholder">
+                <input type="text" id="tekst" name="fname" value=""><br>
+                <input type="submit" id = "tekstPoslji" value="Pošlji">
+            </form> 
         </div> 
     </div>
 </template>
