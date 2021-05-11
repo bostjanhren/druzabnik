@@ -179,13 +179,13 @@
     #newMessage{
         float:right;
         clear: both;
-        margin-right: 20vw;
+        margin-right: 10vw;
         margin-top:8vh;
     }
 
     #newMessage #tekst{
         height: 5vh;
-        width:20vw;
+        width:60vw;
         border-top-left-radius: 10px;
         border-bottom-left-radius: 10px;
         border-style: solid;
