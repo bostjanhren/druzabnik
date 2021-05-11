@@ -25,10 +25,5 @@
             </form>
         </div>
 
-        <div class = "credits">
-            <p>
-                 Ustvarili študentje FD in FRI
-            </p>
-        </div>
     </div>
 </template>
