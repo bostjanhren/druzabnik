@@ -16,7 +16,7 @@
         </div>
 
         <div class = "underBarProstovoljci"> 
-            <h2>Kontakti</h2>
+            <h2>Pogovori</h2>
             <div v-for="contact in contacts" v-bind:key="contact" class="for-loop-contacts"> 
                 <div>
                     <b-button class="contactBtn" v-b-toggle="'gumbkontakt-' + contact.id">{{ contact.homeName }}</b-button>
