@@ -7,9 +7,11 @@
 
     .prijavaProstovoljci{
         color: white;
-        margin-left: 40.5vw;
         font-size: 45px;
+        display: flex;
+        justify-content: center;
     }
+    
     #btnNazaj2{
         background-color: #41b0cd;
         color: white;
@@ -24,8 +26,6 @@
         background: #173b5e;
         cursor: pointer;
     }
-
-
 }
 
 @media only screen and (max-width: 700px) {
@@ -37,8 +37,9 @@
 
     .prijavaProstovoljci{
         color: white;
-        margin-left: 17.5vw;
         font-size: 30px;
+        display: flex;
+        justify-content: center;
     }
 
     #btnNazaj2{

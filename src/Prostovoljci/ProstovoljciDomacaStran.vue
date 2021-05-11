@@ -19,8 +19,8 @@
             <button id ="btnPrijava" type="submit">Prijava</button>
         </form>
         <br>
-        <form action = "/registracijaProstovoljci">
-            <label class= "registracija-text" for="exampleInputPassword1">Ali še niste uporabnik?</label>
+        <form action = "registracijaProstovoljci">
+            <label class= "registracija-text">Ali še niste uporabnik?</label>
             <button id = "btnRegistracija" type="submit">Registracija</button>
         </form>
 
