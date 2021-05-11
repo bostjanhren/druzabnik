@@ -20,13 +20,14 @@
                 <div>
                     <b-button class="homesBtn" v-b-toggle="'accordison-' + blog.homeName">{{ blog.homeName }}</b-button>
                     <b-collapse :id="'accordison-' + blog.homeName" :class="'accordison-' + blog.homeName">
-                        <p >colapse content</p>
-                        <form action = "">
-                            <button class = "btnHomeSelect" type="submit">Izberi</button>
-                        </form>
+                        <label class= "HomeNameText">{{ blog.homeName }}</label>
+                        <div>
+                            <router-link :to="'/prostovoljciInfoZaDom/' +  blog.homeName" tag="button" class = "btnHomeSelect">Izberi</router-link>
+                        </div>    
                     </b-collapse>
                 </div>
             </div>
+
         
         </div> 
     </div>
@@ -44,4 +45,6 @@
         }
     }
 </script>
+
+
 

@@ -14,7 +14,7 @@
 </template>
 
 <script>
-import { userService, authenticationService } from '@/_services';
+import { handleResponse, requestOptions } from '../_helpers';
 
 export default {
     data () {
@@ -24,7 +24,7 @@ export default {
         };
     },
     created () {
-        userService.getById(this.currentUser.id).then(user => this.userFromApi = user);
+        getById(this.currentUser.id).then(user => this.userFromApi = user);
     }
 };
 </script>
