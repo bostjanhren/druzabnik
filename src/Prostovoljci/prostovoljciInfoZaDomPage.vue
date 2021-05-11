@@ -23,44 +23,37 @@
                     <label >{{ $route.params.id }}</label>
                     </div>
                     <div class="homeDescription">
-                        <label >{{ blog.desciption }}</label>
+                        <label >{{ blog.description }}</label>
                     </div>
 
+                    <div class="btnODomu">
+
+                        <form action="/">
+                            <button class="btnHomeSelection">
+                                Spoznaj Ekipo
+                            </button>
+                        </form>
+                        
+                            <form action="/prostovoljciRegistracijaDom">
+                                <button class="btnHomeSelection">Pošlji sporočilo</button>
+                            </form>
+                        
+                        
+
+                        <form action="/vstopnaStran">
+                            <button class="btnHomeSelection">
+                                Izberi termin
+                            </button>
+                        </form>
+                    </div>
 
                 </div>
 
                 
+        
             </div>
 
             
-            
-
-            <form>
-                <div class="form-group">
-                <button class="btn btn-primary" :disabled="loading">
-                    <span class="spinner-border spinner-border-sm" v-show="loading"></span>
-                    <span>Spoznaj Ekipo</span>
-                </button>
-                </div>
-            </form>
-
-            <form action="/prostovoljciRegistracijaDom">
-                <div class="form-group">
-                <button class="btn btn-primary" :disabled="loading">
-                    <span class="spinner-border spinner-border-sm" v-show="loading"></span>
-                    <span>Rezerviraj</span>
-                </button>
-                </div>
-            </form>
-
-            <form action="/vstopnaStran">
-                <div class="form-group">
-                <button class="btn btn-primary" :disabled="loading">
-                    <span class="spinner-border spinner-border-sm" v-show="loading"></span>
-                    <span>Izberi termin</span>
-                </button>
-                </div>
-            </form>
 
             
 

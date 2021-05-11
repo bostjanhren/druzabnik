@@ -23,4 +23,21 @@
         text-align: center;
         
       }
+      .btnODomu{
+          font-size: 15px;
+      }
+      .btnHomeSelection{
+        width: 15vw;
+        height: 5vh;
+        border-radius: 10px;
+        border-color:white;
+        background-color: #41b0cd;
+        color: white;
+        margin-top: 3vh;
+        position: center;
+      }
+      .btnHomeSelection:hover{
+        background: #173b5e;
+        cursor: pointer;
+    }
 }

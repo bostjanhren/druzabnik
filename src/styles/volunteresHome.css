@@ -81,6 +81,44 @@
     background-position: center;
     
   }
+  .accordison-Domžale{
+    height: 45vh;
+    background-image: url('../resources/DomUpokojencevDomzale.jpeg');
+    background-size: auto 120vh;
+    background-position: 50% 50%;
+    
+  }
+  .accordison-Topolšica{
+    height: 45vh;
+    background-image: url('../resources/DomUpokojencevTopolscica.jpeg');
+    background-size: auto 145vh;
+    background-position:50% 75%;
+    
+  }
+  .accordison-Škofja_Loka{
+    height: 45vh;
+    background-image: url('../resources/DomUpokojencevSkofjaLoka.jpeg');
+    background-size: auto 145vh;
+    background-position: center;
+  }
+  .accordison-Kamnik{
+    height: 45vh;
+    background-image: url('../resources/DomUpokojencevKamnik.jpg');
+    background-size: auto 220vh;
+    background-position: center;
+  }
+  .accordison-Postojna{
+    height: 45vh;
+    background-image: url('../resources/DomUpokojencevPostojna.jpeg');
+    background-size: auto 145vh;
+    background-position: 50% 55%;
+  }
+  .accordison-Koper{
+    height: 45vh;
+    background-image: url('../resources/DomUpokojencevKoper.jpg');
+    background-size: auto 140vh;
+    background-position: 70% 70%;
+  }
   .HomeNameText{
     font-size: 65px;
     color: #173b5e;
@@ -136,6 +174,7 @@
 .headerHomeVol{
     text-align: center;
     padding-top: 5vh;
+    
 }
 .dropdown{
   text-align: right;
@@ -196,5 +235,6 @@ color: #173b5e;
 font-weight: 600;
 text-align: center;
 }
+
     
 }
