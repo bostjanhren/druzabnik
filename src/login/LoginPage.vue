@@ -61,13 +61,7 @@ export default {
       password: { required }
     },
     created () {
-        // redirect to home if already logged in
-        if (authenticationService.currentUserValue) { 
-            return router.push('/');
-        }
-
-        // get return url from route parameters or default to '/'
-        this.returnUrl = this.$route.query.returnUrl || '/';
+        
     },
     methods: {
         onSubmit () {
