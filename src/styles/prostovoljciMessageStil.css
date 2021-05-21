@@ -44,12 +44,12 @@
         width: 45vw;
         float:left;
         clear:both;
-        border-top-right-radius: 25px;
-        border-bottom-right-radius: 25px;
+        border-radius: 25px;
         padding-right: 2vw;
         padding-left: 2vw;
         padding-top: 0.5vw;
         padding-bottom: 0.5vw;
+        margin-left: 1vw;
     }
     .messageRight{
         background-color: #153d60;
@@ -58,8 +58,8 @@
         width: 45vw;
         float:right;
         clear: both;
-        border-top-left-radius: 25px;
-        border-bottom-left-radius: 25px;
+        margin-right: 1vw;
+        border-radius: 25px;
         padding-right: 2vw;
         padding-left: 2vw;
         padding-top: 0.5vw;

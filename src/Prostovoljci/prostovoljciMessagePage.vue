@@ -61,6 +61,13 @@
                 });
             })
             this.messagesDisp = messagesSelected;
+        },
+        methods: {
+            odjavaClick(){
+                console.log("Odjava");
+                authenticationService.logout();
+                router.push("/vstopnaStran");
+            }
         }
     }
 </script>

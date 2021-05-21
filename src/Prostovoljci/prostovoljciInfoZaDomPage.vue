@@ -35,8 +35,8 @@
                             </button>
                         </form>
                         -->
-                            <form action="/prostovoljciRegistracijaDom">
-                                <button class="btnHomeSelection">Pošlji sporočilo</button>
+                            <form @submit.prevent="contactClick">
+                                <button class="btnHomeSelection" >Pošlji sporočilo</button>
                             </form>
                         
                         
@@ -60,6 +60,9 @@
 </template>
 
 <script>
+    import { router } from '@/_helpers';
+    import { authenticationService } from '@/_services';
+
     export default {
         data: () => ({
              blogs:[],
@@ -76,6 +79,12 @@
             this.pickedHomename = this.pickedHome.homeName;
             this.pickedHomeDescription = this.pickedHome.description;
             
+        },
+        methods: {
+            contactClick(){
+                console.log("click redirect")
+                router.push('/prostovoljciMessage')
+            }
         }
     }
 </script>
