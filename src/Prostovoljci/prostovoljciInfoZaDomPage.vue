@@ -17,13 +17,12 @@
 
         <div class = "underBarIzbiraDoma">
 
-            <div v-for="blog in blogs" v-bind:key="blog" class="for-loop"> 
-                <div v-if="blog.homeName == $route.params.id" class= "HomeNameText">
+                <div class= "HomeNameText">
                     <div class="homeIzbiraText">
-                    <label >{{ $route.params.id }}</label>
+                    <label>{{pickedHomename}}</label>
                     </div>
                     <div class="homeDescription">
-                        <label >{{ blog.description }}</label>
+                        <label >{{pickedHomeDescription}}</label>
                     </div>
 
                     <div class="btnODomu">
@@ -49,13 +48,7 @@
 
                 </div>
 
-                
-        
-            </div>
-
-            
-
-            
+    
 
         </div>
 
@@ -67,12 +60,23 @@
 <script>
     export default {
         data: () => ({
-             blogs:[]
+             blogs:[],
+             pickedHome,
+             pickedHomename,
+             pickedHomeDescription
         }),
         created(){
             this.$http.get('https://druzabnikapi.herokuapp.com/homes').then(function(data){
                 this.blogs = data.body;
             })
+
+            this.pickedHome= JSON.parse(localStorage.getItem("pickedHome"));
+            console.log(this.pickedHome);
+            this.pickedHomename = this.pickedHome.homeName;
+            console.log(this.pickedHomename);
+            this.pickedHomeDescription = this.pickedHome.description;
+            console.log(this.pickedHomeDescription);
+            
         }
     }
 </script>

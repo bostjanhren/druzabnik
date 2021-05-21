@@ -8,6 +8,9 @@ const currentUserSubject = new BehaviorSubject(JSON.parse(localStorage.getItem('
 export const authenticationService = {
     login,
     logout,
+    registerUser,
+    registerHome,
+    loginHome,
     currentUser: currentUserSubject.asObservable(),
     get currentUserValue () { return currentUserSubject.value }
 };
@@ -28,4 +31,36 @@ function logout() {
     // remove user from local storage to log user out
     localStorage.removeItem('currentUser');
     currentUserSubject.next(null);
+}
+
+function registerUser(user){
+    return fetch(`${config.apiUrl}/users/register`,requestOptions.post(user))
+        .then(handleResponse)
+        .then( data =>{
+            console.log("Registered: " + JSON.stringify(user))
+            return data;
+            }
+        );
+}
+
+function registerHome(user){
+    return fetch(`${config.apiUrl}/homes/register`,requestOptions.post(user))
+        .then(handleResponse)
+        .then( data =>{
+            console.log("Registered: " + JSON.stringify(user))
+            return data;
+            }
+        );
+}
+
+function loginHome(username, password) {
+    return fetch(`${config.apiUrl}/users/authenticate`, requestOptions.post({ username, password }))
+        .then(handleResponse)
+        .then(user => {
+            // store user details and jwt token in local storage to keep user logged in between page refreshes
+            localStorage.setItem('currentUser', JSON.stringify(user));
+            currentUserSubject.next(user);
+
+            return user;
+        });
 }
