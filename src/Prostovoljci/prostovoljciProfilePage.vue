@@ -24,13 +24,13 @@
                 </div>
             </form>
 
-            <div class="Ime">
+            <div class="ImeEdit">
                 <label class= "email-text" for="exampleInputEmail1"> Ime </label>
-                <input type="uporabniskoIme" v-model="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Vnesi email">
+                <input type="uporabniskoIme" v-model="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ime">
             </div>
-            <div class="Priimek">
+            <div class="PriimekEdit">
                 <label class= "geslo-text" for="exampleInputPassword1">Priimek</label>
-                <input type="password" v-model="password" class="form-control" id="exampleInputPassword1" placeholder="Geslo">
+                <input type="password" v-model="password" class="form-control" id="exampleInputPassword1" placeholder="Priimek">
             </div>
             <div class="Starost">
                 <label class= "email-text" for="exampleInputEmail1"> Starost </label>
@@ -41,7 +41,7 @@
                 <input type="password" v-model="password" class="form-control" id="exampleInputPassword1" placeholder="Geslo">
             </div>
 
-
+            <!--- TODO: urediti fielde in pullat info od current logged in userja in slika-->
 
             <br>
             <br>
