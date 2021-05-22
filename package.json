@@ -2,7 +2,7 @@
   "name": "vue-role-based-authorization-example",
   "version": "1.0.0",
   "scripts": {
-    "start": "node ../index.js",
+    "start": "node ../src/index.js",
     "heroku-prebuild": "npm install"
     
   },
