@@ -1,4 +1,30 @@
 @media only screen and (min-width: 701px) {
+    .loginHomePage{
+        width: 100vw;
+        height: 100vh;
+        
+    }
+    
+    .topBarDomovi{
+        overflow: visible;
+        
+        width: 100%;
+        height: 15vh;
+        
+        position: fixed;
+        background-color: white;
+        background-image: url('../resources/druzabnik_smajli_blue.png');
+        background-repeat: no-repeat;
+        background-size: auto 20vh;
+        background-position: left;
+    }
+    .headerHome{
+        text-align: center;
+        padding-top: 2.5vh;
+    }
+
+
+
 
 }
 
