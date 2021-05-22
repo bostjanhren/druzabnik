@@ -1,7 +1,7 @@
 @media only screen and (min-width: 701px) {
     #prostovoljciMessageStil{
         width:100%;
-        height:200vh;
+        height:100vh;
     }
 
     .topBarProstovoljci{
@@ -107,7 +107,7 @@
 
     #prostovoljciMessageStil{
         width:100%;
-        height:200vh;
+        height:100vh;
     }
 
     .topBarProstovoljci{
@@ -123,6 +123,10 @@
         background-repeat: no-repeat;
         background-size: auto 20vh;
         background-position: left;
+    }
+
+    body{
+        background-color: #487a9d;
     }
 
     #chatTitle{
@@ -181,6 +185,7 @@
         clear: both;
         margin-right: 10vw;
         margin-top:8vh;
+        margin-bottom: 2vh;
     }
 
     #newMessage #tekst{
@@ -206,6 +211,5 @@
         background-color: #43b1cc;
         color:white;
     }
-
 
 }
