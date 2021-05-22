@@ -2,9 +2,7 @@
   "name": "vue-role-based-authorization-example",
   "version": "1.0.0",
   "scripts": {
-    "start": "node ../src/index.js",
-    "build": "webpack"
-    
+    "start": "webpack-dev-server --open"
   },
   "dependencies": {
     "bootstrap": "^5.0.0",
