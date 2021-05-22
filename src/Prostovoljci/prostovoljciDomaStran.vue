@@ -7,10 +7,11 @@
             <div class="dropdown">
                 <b-dropdown class=dropdownIcon text="Menu" size="lg" variant="info">
                     <b-dropdown-item href="/prostovoljciDoma" >Domovi</b-dropdown-item>
-                    <b-dropdown-item href="/prostovoljciInbox" >Sporočila</b-dropdown-item>
+                    <!--<b-dropdown-item href="/prostovoljciInbox" >Sporočila</b-dropdown-item>-->
+                    <b-dropdown-item href="/prostovoljciInbox">Sporočila</b-dropdown-item>
                     <b-dropdown-item href="/prostovoljciProfile">Profil</b-dropdown-item>
-                    <b-dropdown-item href="/prostovoljciInfoZaDom">Aktivnosti</b-dropdown-item>
-                    <b-dropdown-item href="/vstopnaStran">Odjava</b-dropdown-item>
+                    <!--<b-dropdown-item href="/prostovoljciInfoZaDom">Aktivnosti</b-dropdown-item>-->
+                    <b-dropdown-item @click="odjavaClick">Odjava</b-dropdown-item>
                 </b-dropdown>
             </div>
         </div>
@@ -22,7 +23,7 @@
                     <b-collapse :id="'accordison-' + blog.homeName" :class="'accordison-' + blog.homeName">
                         <label class= "HomeNameText">{{ blog.homeName }}</label>
                         <div>
-                            <router-link :to="'/prostovoljciInfoZaDom/' +  blog.homeName" tag="button" class = "btnHomeSelect">Izberi</router-link>
+                            <p @click="onHomeClick(blog.homeName)" tag="button" class = "btnHomeSelect">Izberi</p>
                         </div>    
                     </b-collapse>
                 </div>
@@ -34,6 +35,9 @@
 </template>
 
 <script>
+    import { router } from '@/_helpers';
+    import { authenticationService } from '@/_services';
+
     export default {
         data: () => ({
              blogs:[]
@@ -42,6 +46,28 @@
             this.$http.get('https://druzabnikapi.herokuapp.com/homes').then(function(data){
                 this.blogs = data.body;
             })
+        },
+        methods: {
+            odjavaClick(){
+                console.log("Odjava");
+                authenticationService.logout();
+                router.push("/vstopnaStran");
+            },
+            onHomeClick(nameofHome){
+                console.log(nameofHome)
+                this.$http.get('https://druzabnikapi.herokuapp.com/homes')
+                .then(function(data){
+                    var homes = data.body;
+                    homes.forEach(home=>{
+                        if(home.homeName == nameofHome){
+                            localStorage.removeItem('pickedHome');
+                            localStorage.setItem('pickedHome', JSON.stringify(home));
+                            router.push('/prostovoljciInfoZaDom')
+                        }
+                    })
+                })
+                
+            }
         }
     }
 </script>

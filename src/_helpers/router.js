@@ -33,8 +33,7 @@ export const router = new Router({
     routes: [
         { 
             path: '/', 
-            component: HomePage, 
-            meta: { authorize: [] } 
+            component: PrvaStran
         },
         { 
             path: '/admin', 
@@ -78,7 +77,7 @@ export const router = new Router({
         },
 
         { 
-            path: '/prostovoljciInfoZaDom/:id',
+            path: '/prostovoljciInfoZaDom',
             component: prostovoljciInfoZaDomPage
         },
 

@@ -7,10 +7,11 @@
             <div class="dropdown">
                 <b-dropdown class=dropdownIcon text="Menu" size="lg" variant="info">
                     <b-dropdown-item href="/prostovoljciDoma" >Domovi</b-dropdown-item>
-                    <b-dropdown-item href="/prostovoljciInbox" >Sporočila</b-dropdown-item>
+                    <!--<b-dropdown-item href="/prostovoljciInbox" >Sporočila</b-dropdown-item>-->
+                    <b-dropdown-item href="/prostovoljciInbox">Sporočila</b-dropdown-item>
                     <b-dropdown-item href="/prostovoljciProfile">Profil</b-dropdown-item>
-                    <b-dropdown-item href="/prostovoljciInfoZaDom">Aktivnosti</b-dropdown-item>
-                    <b-dropdown-item href="/vstopnaStran">Odjava</b-dropdown-item>
+                    <!--<b-dropdown-item href="/prostovoljciInfoZaDom">Aktivnosti</b-dropdown-item>-->
+                    <b-dropdown-item @click="odjavaClick">Odjava</b-dropdown-item>
                 </b-dropdown>
             </div>
         </div>
@@ -60,6 +61,13 @@
                 });
             })
             this.messagesDisp = messagesSelected;
+        },
+        methods: {
+            odjavaClick(){
+                console.log("Odjava");
+                authenticationService.logout();
+                router.push("/vstopnaStran");
+            }
         }
     }
 </script>
