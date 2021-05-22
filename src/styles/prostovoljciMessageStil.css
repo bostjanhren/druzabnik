@@ -1,7 +1,7 @@
 @media only screen and (min-width: 701px) {
     #prostovoljciMessageStil{
         width:100%;
-        height:200vh;
+        height:100vh;
     }
 
     .topBarProstovoljci{
@@ -44,12 +44,12 @@
         width: 45vw;
         float:left;
         clear:both;
-        border-top-right-radius: 25px;
-        border-bottom-right-radius: 25px;
+        border-radius: 25px;
         padding-right: 2vw;
         padding-left: 2vw;
         padding-top: 0.5vw;
         padding-bottom: 0.5vw;
+        margin-left: 1vw;
     }
     .messageRight{
         background-color: #153d60;
@@ -58,8 +58,8 @@
         width: 45vw;
         float:right;
         clear: both;
-        border-top-left-radius: 25px;
-        border-bottom-left-radius: 25px;
+        margin-right: 1vw;
+        border-radius: 25px;
         padding-right: 2vw;
         padding-left: 2vw;
         padding-top: 0.5vw;
@@ -107,7 +107,7 @@
 
     #prostovoljciMessageStil{
         width:100%;
-        height:200vh;
+        height:100vh;
     }
 
     .topBarProstovoljci{
@@ -123,6 +123,10 @@
         background-repeat: no-repeat;
         background-size: auto 20vh;
         background-position: left;
+    }
+
+    body{
+        background-color: #487a9d;
     }
 
     #chatTitle{
@@ -181,6 +185,7 @@
         clear: both;
         margin-right: 10vw;
         margin-top:8vh;
+        margin-bottom: 2vh;
     }
 
     #newMessage #tekst{
@@ -206,6 +211,5 @@
         background-color: #43b1cc;
         color:white;
     }
-
 
 }

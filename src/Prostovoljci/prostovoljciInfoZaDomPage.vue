@@ -7,10 +7,11 @@
             <div class="dropdown">
                 <b-dropdown class=dropdownIcon text="Menu" size="lg" variant="info">
                     <b-dropdown-item href="/prostovoljciDoma" >Domovi</b-dropdown-item>
-                    <b-dropdown-item href="/prostovoljciInbox" >Sporočila</b-dropdown-item>
+                    <!--<b-dropdown-item href="/prostovoljciInbox" >Sporočila</b-dropdown-item>-->
+                    <b-dropdown-item href="/prostovoljciInbox">Sporočila</b-dropdown-item>
                     <b-dropdown-item href="/prostovoljciProfile">Profil</b-dropdown-item>
-                    <b-dropdown-item href="/prostovoljciInfoZaDom">Aktivnosti</b-dropdown-item>
-                    <b-dropdown-item href="/vstopnaStran">Odjava</b-dropdown-item>
+                    <!--<b-dropdown-item href="/prostovoljciInfoZaDom">Aktivnosti</b-dropdown-item>-->
+                    <b-dropdown-item @click="odjavaClick">Odjava</b-dropdown-item>
                 </b-dropdown>
             </div>
         </div>
@@ -27,14 +28,15 @@
 
                     <div class="btnODomu">
 
+                        <!--
                         <form action="/">
                             <button class="btnHomeSelection">
                                 Spoznaj Ekipo
                             </button>
                         </form>
-                        
-                            <form action="/prostovoljciRegistracijaDom">
-                                <button class="btnHomeSelection">Pošlji sporočilo</button>
+                        -->
+                            <form @submit.prevent="contactClick">
+                                <button class="btnHomeSelection" >Pošlji sporočilo</button>
                             </form>
                         
                         
@@ -58,6 +60,9 @@
 </template>
 
 <script>
+    import { router } from '@/_helpers';
+    import { authenticationService } from '@/_services';
+
     export default {
         data: () => ({
              blogs:[],
@@ -71,12 +76,20 @@
             })
 
             this.pickedHome= JSON.parse(localStorage.getItem("pickedHome"));
-            console.log(this.pickedHome);
             this.pickedHomename = this.pickedHome.homeName;
-            console.log(this.pickedHomename);
             this.pickedHomeDescription = this.pickedHome.description;
-            console.log(this.pickedHomeDescription);
             
+        },
+        methods: {
+            contactClick(){
+                console.log("click redirect")
+                router.push('/prostovoljciMessage')
+            },
+            odjavaClick(){
+                console.log("Odjava");
+                authenticationService.logout();
+                router.push("/vstopnaStran");
+            }
         }
     }
 </script>

@@ -1,62 +1,78 @@
 <template>
-    <div>
-        <h1>Moj Profil</h1>
+    <div class = "editProfile">
 
+        <div class = "topBarProstovoljci">
+            <h1 class="headerHomeVol">Moj Profil</h1>
 
-         <form>
-            <div class="form-group">
-            <p>Prostor za dodajanje slike</p>
-            <button>Slika</button>
+            <div class="dropdown">
+                <b-dropdown class=dropdownIcon text="Menu" size="lg" variant="info">
+                    <b-dropdown-item href="/prostovoljciDoma" >Domovi</b-dropdown-item>
+                    <!--<b-dropdown-item href="/prostovoljciInbox" >Sporočila</b-dropdown-item>-->
+                    <b-dropdown-item href="/prostovoljciInbox">Sporočila</b-dropdown-item>
+                    <b-dropdown-item href="/prostovoljciProfile">Profil</b-dropdown-item>
+                    <!--<b-dropdown-item href="/prostovoljciInfoZaDom">Aktivnosti</b-dropdown-item>-->
+                    <b-dropdown-item @click="odjavaClick">Odjava</b-dropdown-item>
+                </b-dropdown>
             </div>
-        </form>
+        </div>
 
-         <form>
-            <div class="form-group">
-             <label for="Ime, Priimek, Starost">Ime</label>
-             <input name="Ime, Priimek, Starost" v-model="firstName" placeholder="Ime">
+        <div class = "underBarProstovoljciEditPage"> 
+            <form>
+                <div class="Slika">
+                    <p>Prostor za dodajanje slike</p>
+                    <button>Slika</button>
+                </div>
+            </form>
+
+            <div class="Ime">
+                <label class= "email-text" for="exampleInputEmail1"> Ime </label>
+                <input type="uporabniskoIme" v-model="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Vnesi email">
             </div>
-        </form>
-
-        <form>
-            <div class="form-group">
-             <label for="Ime, Priimek, Starost">Priimek</label>
-             <input name="Ime, Priimek, Starost" v-model="firstName" placeholder="Priimek">
+            <div class="Priimek">
+                <label class= "geslo-text" for="exampleInputPassword1">Priimek</label>
+                <input type="password" v-model="password" class="form-control" id="exampleInputPassword1" placeholder="Geslo">
             </div>
-        </form>
-
-        <form>
-            <div class="form-group">
-             <label for="Ime, Priimek, Starost">Starost</label>
-             <input name="Ime, Priimek, Starost" v-model="firstName" placeholder="Starost">
+            <div class="Starost">
+                <label class= "email-text" for="exampleInputEmail1"> Starost </label>
+                <input type="uporabniskoIme" v-model="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Vnesi email">
             </div>
-        </form>
-
-         <form>
-            <div class="form-group">
-            <label for="O meni">O meni</label>
-             <input name="O meni" v-model="firstName" placeholder="O meni">
+            <div class="Opis">
+                <label class= "geslo-text" for="exampleInputPassword1">Opis</label>
+                <input type="password" v-model="password" class="form-control" id="exampleInputPassword1" placeholder="Geslo">
             </div>
-        </form>
 
-        <form>
-            <div class="form-group">
-            <button class="btn btn-primary" :disabled="loading">
-                <span class="spinner-border spinner-border-sm" v-show="loading"></span>
-                <span>Shrani</span>
-            </button>
-            </div>
-        </form>
 
-        <br>
 
-        <form action="/prostovoljciDoma">
-            <div class="form-group">
-            <button class="btn btn-primary" :disabled="loading">
-                <span class="spinner-border spinner-border-sm" v-show="loading"></span>
-                <span>Domov</span>
-            </button>
-            </div>
-        </form>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <form>
+                <div class="form-group">
+                <button class="btn btn-primary" :disabled="loading">
+                    <span class="spinner-border spinner-border-sm" v-show="loading"></span>
+                    <span>Shrani</span>
+                </button>
+                </div>
+            </form>
+
+            <br>
+
+            <form action="/prostovoljciDoma">
+                <div class="form-group">
+                <button class="btn btn-primary" :disabled="loading">
+                    <span class="spinner-border spinner-border-sm" v-show="loading"></span>
+                    <span>Domov</span>
+                </button>
+                </div>
+            </form>
+
+        </div>
 
     </div>
 </template>

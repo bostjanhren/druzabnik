@@ -8,8 +8,8 @@
                 <b-dropdown class=dropdownIcon text="Menu" size="lg" variant="info">
                     <b-dropdown-item href="/prostovoljciDoma" >Domovi</b-dropdown-item>
                     <!--<b-dropdown-item href="/prostovoljciInbox" >Sporočila</b-dropdown-item>-->
-                    <b-dropdown-item @click="sporocilaClick">Sporočila</b-dropdown-item>
-                    <b-dropdown-item @click="profilClick">Profil</b-dropdown-item>
+                    <b-dropdown-item href="/prostovoljciInbox">Sporočila</b-dropdown-item>
+                    <b-dropdown-item href="/prostovoljciProfile">Profil</b-dropdown-item>
                     <!--<b-dropdown-item href="/prostovoljciInfoZaDom">Aktivnosti</b-dropdown-item>-->
                     <b-dropdown-item @click="odjavaClick">Odjava</b-dropdown-item>
                 </b-dropdown>
@@ -48,27 +48,25 @@
             })
         },
         methods: {
-            sporocilaClick(){
-                console.log("Sporocila");
-                router.push('/prostovoljciInbox')
-            },
-            profilClick(){
-                console.log("Profil");
-            },
             odjavaClick(){
                 console.log("Odjava");
+                authenticationService.logout();
+                router.push("/vstopnaStran");
             },
             onHomeClick(nameofHome){
                 console.log(nameofHome)
-                this.$http.get('https://druzabnikapi.herokuapp.com/homes').then(function(data){
+                this.$http.get('https://druzabnikapi.herokuapp.com/homes')
+                .then(function(data){
                     var homes = data.body;
                     homes.forEach(home=>{
                         if(home.homeName == nameofHome){
+                            localStorage.removeItem('pickedHome');
                             localStorage.setItem('pickedHome', JSON.stringify(home));
+                            router.push('/prostovoljciInfoZaDom')
                         }
                     })
                 })
-                router.push('/prostovoljciInfoZaDom')
+                
             }
         }
     }

@@ -1,35 +1,29 @@
 <template>
-    <div>
-        <h1>Domaca stran</h1>
-        
-        <br>
+    <div class = "loginHomePage">
 
-        <form action = "/nabiralnikdom">
-            <button type="submit" class="btn btn-primary">Nabiralnik</button>
-        </form>
+        <div class = "topBarDomovi">¸
+            <h1 class="headerHome">DomoviHOME</h1> 
 
-        <br>
 
-        <form action = "/profilnastrandom">
-            <button type="submit" class="btn btn-primary">Uredi profil</button>
-        </form>
-        
-        <br>
+            <div class="dropdown">
+                <b-dropdown class=dropdownIcon text="Menu" size="lg" variant="info">
+                    <b-dropdown-item href="/nabiralnikdom">Sporočila</b-dropdown-item>
+                    <b-dropdown-item href="/profilnastrandom">Profil</b-dropdown-item>
+                    <b-dropdown-item href="/domdolocitermin">Termini</b-dropdown-item>
+                    <b-dropdown-item href="/vstopnaStran">Odjava</b-dropdown-item>
+                </b-dropdown>
+            </div>
+        </div>
 
-        <form action = "/domdolocitermin">
-            <button type="submit" class="btn btn-primary">Termini</button>
-        </form>
 
-        <br>
 
-        <form action = "/vstopnaStran">
-            <button type="submit" class="btn btn-primary">Odjava</button>
-        </form>
+        <div class = "underbar"> 
 
-        <br>
 
-        <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-        </p>
+            <p>
+                Dummy text
+            </p>
+
+        </div>
     </div>
 </template>

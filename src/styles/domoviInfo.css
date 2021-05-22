@@ -41,3 +41,47 @@
         cursor: pointer;
     }
 }
+
+@media only screen and (max-width: 700px) {
+  .underBarIzbiraDoma{
+      width: 100%;
+      height: 100%;
+  
+      padding-top: 20vh;
+
+      background-repeat: no-repeat;
+      background-size: auto 175vh;
+      background-position: center; 
+      background-color: #173b5e;
+  }
+  .homeIzbiraText{
+      font-size: 55px;
+      color: white;
+      font-weight: 600;
+      text-align: center;
+      
+    }
+    .homeDescription{
+      font-size: 15px;
+      color: white;
+      text-align: center;
+      
+    }
+    .btnODomu{
+        font-size: 15px;
+    }
+    .btnHomeSelection{
+      width: 15vw;
+      height: 5vh;
+      border-radius: 10px;
+      border-color:white;
+      background-color: #41b0cd;
+      color: white;
+      margin-top: 3vh;
+      position: center;
+    }
+    .btnHomeSelection:hover{
+      background: #173b5e;
+      cursor: pointer;
+  }
+}
