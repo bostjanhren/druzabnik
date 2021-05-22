@@ -13,7 +13,7 @@
     "vue-router": "^3.0.2",
     "vuelidate": "^0.7.4",
     "vuetify": "^2.4.11"
-  },
+  }, 
   "devDependencies": {
     "bootstrap": "^5.0.0",
     "bootstrap-vue": "^2.21.2",
