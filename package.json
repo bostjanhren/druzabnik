@@ -2,8 +2,7 @@
   "name": "vue-role-based-authorization-example",
   "version": "1.0.0",
   "scripts": {
-    "start": "webpack-dev-server --open",
-    "heroku-prebuild": "yarn install --production=false"
+    "start": "webpack-dev-server --open"
   },
   "dependencies": {
     "bootstrap": "^5.0.0",
@@ -16,6 +15,14 @@
     "vuetify": "^2.4.11"
   },
   "devDependencies": {
+    "bootstrap": "^5.0.0",
+    "bootstrap-vue": "^2.21.2",
+    "rxjs": "^6.4.0",
+    "vue": "^2.6.12",
+    "vue-resource": "^1.5.2",
+    "vue-router": "^3.0.2",
+    "vuelidate": "^0.7.4",
+    "vuetify": "^2.4.11",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.6.1",
