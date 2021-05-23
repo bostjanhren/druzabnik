@@ -21,13 +21,20 @@
         width: 100%;
         height: 100%;
         padding-top: 25vh;
-        background-image: url('../resources/main_image_klopca.jpg');
+        background-image: url('../resources/klopca2.jpg');
         background-repeat: no-repeat;
         background-size: auto 175vh;
         background-position: center; 
     }
 
     .registracijaProstovoljci1{
+        color: white;
+        font-size: 45px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .registracijaProstovoljci1-tekst{
         color: white;
         font-size: 45px;
         display: flex;
@@ -141,11 +148,9 @@
     .topbar{
         overflow: visible;
         top: 0;
-        width: 100%;
-        height: 20vh;
+        height: 17vh;
         position: fixed;
         background-color: white;
-        background-image: url('../resources/druzabnik_digonala.png');
         background-repeat: no-repeat;
         background-size: auto 25vh;
         background-position: center;
@@ -153,75 +158,87 @@
     
     .underbar{
         width: 100%;
-        height: 100%;
+        height: auto;
         padding-top: 25vh;
-        background-image: url('../resources/main_image_klopca.jpg');
+        background-image: url('../resources/klopca2.jpg');
         background-repeat: no-repeat;
-        background-size: auto 100vh;
+        background-size: auto 175vh;
         background-position: center; 
     }
     .registracijaProstovoljci1{
         color: white;
-        margin-left: 30vw;
         font-size: 30px;
+        font-weight: 625;
+        top: 20vh;
+        display: flex;
+        justify-content: center;
     }
 
-    .E-mail{
-        margin-left: 40vw;
-        width: 20vw;
-        height: 3vh;
-        position: relative;top:0vh;
-    }
-    .GesloProstovoljci{
-        margin-left: 40vw;
-        width: 20vw;
-        height: 3vh;
-        position: relative;top:10vh;
-    }
-    .email-text{
-        color: white;
-        position: relative;top:0vh;
+    .UporabniskoIme{
+        margin: auto;
+        width: 41vw;
+        height: 4vh;
+        position: relative;
+        top: 23.95vh;
+        display: flex;
+        justify-content: center;
     }
 
-    .Priimek-text{
-        color:white;
-    }
-
-    .Ime-text{
-        color:white;
-    }
-    .GesloProstovoljci-text{
-        color: white;
-        position: relative;top:0vh;
+    #exampleUporabniskoIme1{
+        border-style: none;
     }
    
-    #btnPrijava{
-        background-color: #41b0cd;
-        color: white;
-        position: relative;top:18vh;
-        margin-left: 40vw;
-        width: 20vw;
-        height: 5vh;
-        border-radius: 10px;
-        border-color:white;
+    .Ime{
+        margin: auto;
+        width: 41vw;
+        height: 4vh;
+        position: relative;
+        top: 25.95vh;
+        border-radius: 0%;
+        display: flex;
+        justify-content: center;
     }
 
-    #btnPrijava:hover{
-        background: #173b5e;
-        cursor: pointer;
+    #exampleIme1{
+        border-style: none;
     }
-    #btnRegistracija{
+
+    .GesloProstovoljci{
+        margin: auto;
+        width: 41vw;
+        height: 4vh;
+        position: relative;
+        top: 27.95vh;
+        justify-content: center;
+        display: flex;
+    }
+
+    #exampleGesloProstovoljci1{
+        border-style: none;
+        
+    }
+    
+    ::placeholder{
+        color: black;
+    }
+
+    #btnRegistracijaProstovoljci{
         background-color: #41b0cd;
         color: white;
-        position: relative;top:19vh;
-        margin-left: 40vw;
-        width: 20vw;
+        position: relative;
+        top:39.3vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 41vw;
         height: 5vh;
-        border-radius: 10px;
         border-color:white;
+        border-radius: 6px;
     }
-    #btnRegistracija:hover{
-        background: #173b5e;
+
+    #btnRegistracijaProstovoljci{
+        background: #41b0cd;
+        margin: auto;
         cursor: pointer;
     }
 }
