@@ -4,18 +4,17 @@
         <div class = "topBarProstovoljci">
             <h1 class="headerHomeVol">SPOROČILA</h1> 
 
+            <!--
             <div class="dropdown">
                 <b-dropdown class=dropdownIcon text="" size="lg">
                     <b-dropdown-item href="/prostovoljciDoma" >Domovi</b-dropdown-item>
-                    <!--<b-dropdown-item href="/prostovoljciInbox" >Sporočila</b-dropdown-item>-->
                     <b-dropdown-item href="/prostovoljciInbox">Sporočila</b-dropdown-item>
                     <b-dropdown-item href="/prostovoljciProfile">Profil</b-dropdown-item>
-                    <!--<b-dropdown-item href="/prostovoljciInfoZaDom">Aktivnosti</b-dropdown-item>-->
                     <b-dropdown-item @click="odjavaClick">Odjava</b-dropdown-item>
                 </b-dropdown>
             </div>
-
-            <!--
+            -->
+            
             <div class="dropdown">
                 <button class="dropbtn"></button>
                 <div class="dropdown-content">
@@ -25,7 +24,7 @@
                     <a @click="odjavaClick">Odjava</a>
                 </div>
             </div>
-            -->
+            
         </div>
 
         <div class = "underBarProstovoljciChat"> 
