@@ -11,14 +11,10 @@
                     <b-dropdown-item href="/vstopnaStran">Odjava</b-dropdown-item>
                 </b-dropdown>
             </div>
-
-
         </div>
 
         <div class = "underBarProstovoljci"> 
-
-            {{ create2DList(blogs) }}
-
+            {{ create2DList(blogs,currentUser.id) }}
 
 
             <div v-for="(date, index) in listDates" v-bind:key="date" class="for-loop"> 
@@ -36,25 +32,6 @@
                     </b-collapse>
                 </div>
             </div>
-
-
-
-
-
-            <!---
-            <div v-for="blog in blogs" v-bind:key="blog" class="for-loop"> 
-                
-                <div>
-                    <b-button class="homesBtn" v-b-toggle="'accordison-' + blog.id">{{ dateSplit(blog.appointmentDateTime) }}</b-button>
-                    <b-collapse :id="'accordison-' + blog.id" :class="'accordison-' + blog.id">
-                        <label class= "HomeNameText">{{ blog.times }}</label>
-                        <div>
-
-                        </div>    
-                    </b-collapse>
-                </div>
-            </div> --->
-
         </div>
 
 
@@ -66,12 +43,15 @@
         data: () => ({
              blogs:[],
              listDates:[],
-             listTimes: []
+             listTimes: [],
+             currentUser: ""
+
         }),
         created(){
             this.$http.get('https://druzabnikapi.herokuapp.com/events').then(function(data){
                 this.blogs = data.body;
             })
+            this.currentUser= JSON.parse(localStorage.getItem("currentUser"));
         },
         methods: {
             dateSplit(date){
@@ -80,12 +60,14 @@
                 var res3 = res2[2] + "." + res2[1] + "." + res2[0];
                 return res3
             },
-            create2DList(data){
+            create2DList(data,homeID){
                 var listOfDates = []
                 var i;
                 for(i = 0; i < data.length; i++){
-                    if(!listOfDates.includes(data[i].appointmentDateTime)){
-                        listOfDates.push(data[i].appointmentDateTime)
+                    if(data[i].homeid == homeID){
+                        if(!listOfDates.includes(data[i].appointmentDateTime)){
+                            listOfDates.push(data[i].appointmentDateTime)
+                        }
                     }
                 }
 
@@ -94,11 +76,13 @@
                 var j;
                 for(j = 0; j < listOfDates.length; j++){
                     for(i = 0; i < data.length; i++){
-                        if (data[i].appointmentDateTime == listOfDates[j]){
-                            if(!times.includes(data[i].times)){
-                                times.push(data[i].times)
-                            }
-                        } 
+                        if(data[i].homeid == homeID){
+                            if (data[i].appointmentDateTime == listOfDates[j]){
+                                if(!times.includes(data[i].times)){
+                                    times.push(data[i].times)
+                                }
+                            } 
+                        }
                     }
                     arrayWithTimes.push(times)
                     times = []
