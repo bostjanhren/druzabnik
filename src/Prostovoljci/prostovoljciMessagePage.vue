@@ -33,23 +33,32 @@
                     </div>
                 </div>
             </div>
-            <form class = "form-inline" id = "newMessage" action="placeholder">
-                <input type="text" id="tekst" name="fname" value=""><br>
+            <div id = "bottomDiv">
+            <form class = "form-inline" @submit.prevent="newMessageSubmit" id = "newMessage" action="placeholder">
+                <input type="text" v-model="tekst" id="tekst" name="fname" value=""><br>
                 <input type="submit" id = "tekstPoslji" value="Pošlji">
-            </form> 
+            </form>
+            </div> 
         </div> 
     </div>
 </template>
 
 <script>
-    
+    import config from 'config';
+    import { requestOptions, handleResponse } from '@/_helpers';
+    import { router } from '@/_helpers';
+    import { authenticationService } from '@/_services';
     export default {
-        data: () => ({
-             messagesDisp:[]
-        }),
+        data(){
+            return{
+             messagesDisp:[],
+             tekst:""
+            }
+        },
         created(){
-            var meId = "609260f8d6b89a00157e97e3";
-            var toId = "60994558ad59e600150cfa07";
+            var meId = JSON.parse(localStorage.getItem("currentUser")).id;
+
+            var toId = JSON.parse(localStorage.getItem("pickedHome")).id;
             var messagesSelected = [];
             this.$http.get('https://druzabnikapi.herokuapp.com/messages').then(function(data){
                 var messages = data.body;
@@ -60,6 +69,7 @@
                     }
                 });
             })
+            console.log(messagesSelected);
             this.messagesDisp = messagesSelected;
         },
         methods: {
@@ -67,6 +77,21 @@
                 console.log("Odjava");
                 authenticationService.logout();
                 router.push("/vstopnaStran");
+            },
+            newMessageSubmit(){
+                var message = {
+                    "text": this.tekst,
+                    "fromid": JSON.parse(localStorage.getItem("currentUser")).id,
+                    "toid": JSON.parse(localStorage.getItem("pickedHome")).id
+                }
+                fetch(`${config.apiUrl}/messages`,requestOptions.post(message))
+                    .then(handleResponse)
+                    .then( data =>{
+                        console.log("Sent: " + data)
+                        this.tekst = "";
+                        location.reload();
+                    });
+                
             }
         }
     }

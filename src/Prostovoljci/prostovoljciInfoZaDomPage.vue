@@ -84,6 +84,11 @@
             contactClick(){
                 console.log("click redirect")
                 router.push('/prostovoljciMessage')
+            },
+            odjavaClick(){
+                console.log("Odjava");
+                authenticationService.logout();
+                router.push("/vstopnaStran");
             }
         }
     }
