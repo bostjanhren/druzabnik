@@ -8,12 +8,12 @@
             <label class= "prijavaDom">Že imate račun?</label>
             <label class= "prijavaDom1">VPIS</label>
 
-            <form action = "/domacastrandom">
+            <form @submit.prevent="handleSubmit">
                 <div class="E-mail">
-                    <input type="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder=" Uporabniško ime">
+                    <input type="uporabniskoIme" v-model="username" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder=" Uporabniško ime">
                 </div>
                 <div class="Geslo">
-                    <input type="password" id="exampleInputPassword1" placeholder=" Geslo">
+                    <input type="password" v-model="password" id="exampleInputPassword1" placeholder=" Geslo">
                 </div>
                 <button id="btnPrijava" type="submit">Nadaljuj</button>
             </form>
@@ -26,3 +26,31 @@
         <div style="clear: both;"></div>
     </div>
 </template>
+
+<script>
+import { router } from '@/_helpers';
+import { authenticationService } from '@/_services';
+
+export default {
+  name: "App",
+  data() {
+    return {
+      username: "",
+      password: ""
+    };
+  },
+  methods: {
+        handleSubmit () {
+            console.log("Logging in " + this.username + " " + this.password)
+        authenticationService.loginHome(this.username, this.password)
+            .then(
+            user => router.push('/domacastrandom'),
+            error => {
+            console.log("error")
+            }
+            );
+          
+        }
+    }
+};
+</script>

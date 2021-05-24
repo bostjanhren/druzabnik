@@ -54,7 +54,7 @@ function registerHome(user){
 }
 
 function loginHome(username, password) {
-    return fetch(`${config.apiUrl}/users/authenticate`, requestOptions.post({ username, password }))
+    return fetch(`${config.apiUrl}/homes/authenticate`, requestOptions.post({ username, password }))
         .then(handleResponse)
         .then(user => {
             // store user details and jwt token in local storage to keep user logged in between page refreshes
