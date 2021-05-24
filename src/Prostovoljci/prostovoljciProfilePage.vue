@@ -2,18 +2,19 @@
     <div class = "editProfile">
 
         <div class = "topBarProstovoljci">
-            <h1 class="headerHomeVol">Moj Profil</h1>
+            <h1 class="headerHomeVol">PROFIL</h1>
 
             <div class="dropdown">
-                <b-dropdown class=dropdownIcon text="Menu" size="lg" variant="info">
-                    <b-dropdown-item href="/prostovoljciDoma" >Domovi</b-dropdown-item>
-                    <!--<b-dropdown-item href="/prostovoljciInbox" >Sporočila</b-dropdown-item>-->
-                    <b-dropdown-item href="/prostovoljciInbox">Sporočila</b-dropdown-item>
-                    <b-dropdown-item href="/prostovoljciProfile">Profil</b-dropdown-item>
-                    <!--<b-dropdown-item href="/prostovoljciInfoZaDom">Aktivnosti</b-dropdown-item>-->
-                    <b-dropdown-item @click="odjavaClick">Odjava</b-dropdown-item>
-                </b-dropdown>
+                <input id="dropcheck" class="dropcheck" type="checkbox">
+                <label for="dropcheck" class="dropbtn"></label>
+                <div class="dropdown-content">
+                    <a href="/prostovoljciDoma">Domovi</a>
+                    <a href="/prostovoljciInbox">Sporočila</a>
+                    <a href="/prostovoljciProfile">Profil</a>
+                    <a @click="odjavaClick">Odjava</a>
+                </div>
             </div>
+            
         </div>
 
         <div class = "underBarProstovoljciEditPage"> 
@@ -76,3 +77,27 @@
 
     </div>
 </template>
+
+<script>
+    import config from 'config';
+    import { requestOptions, handleResponse } from '@/_helpers';
+    import { router } from '@/_helpers';
+    import { authenticationService } from '@/_services';
+    export default {
+        data(){
+            return{
+             
+            }
+        },
+        created(){
+            
+        },
+        methods: {
+            odjavaClick(){
+                console.log("Odjava");
+                authenticationService.logout();
+                router.push("/vstopnaStran");
+            },
+        }
+    }
+</script>

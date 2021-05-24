@@ -5,14 +5,14 @@
             <h1 class="headerHomeVol">O domu</h1> 
 
             <div class="dropdown">
-                <b-dropdown class=dropdownIcon text="Menu" size="lg" variant="info">
-                    <b-dropdown-item href="/prostovoljciDoma" >Domovi</b-dropdown-item>
-                    <!--<b-dropdown-item href="/prostovoljciInbox" >Sporočila</b-dropdown-item>-->
-                    <b-dropdown-item href="/prostovoljciInbox">Sporočila</b-dropdown-item>
-                    <b-dropdown-item href="/prostovoljciProfile">Profil</b-dropdown-item>
-                    <!--<b-dropdown-item href="/prostovoljciInfoZaDom">Aktivnosti</b-dropdown-item>-->
-                    <b-dropdown-item @click="odjavaClick">Odjava</b-dropdown-item>
-                </b-dropdown>
+                <input id="dropcheck" class="dropcheck" type="checkbox">
+                <label for="dropcheck" class="dropbtn"></label>
+                <div class="dropdown-content">
+                    <a href="/prostovoljciDoma">Domovi</a>
+                    <a href="/prostovoljciInbox">Sporočila</a>
+                    <a href="/prostovoljciProfile">Profil</a>
+                    <a @click="odjavaClick">Odjava</a>
+                </div>
             </div>
         </div>
 

@@ -148,6 +148,16 @@
       .dropdown:hover .dropdown-content {
         display: block;
       }
+      
+      .dropcheck {
+        position: absolute;
+        left: -9999px;
+        }
+    
+        .dropcheck:checked ~ .dropdown-content {
+         display: block;
+        }
+    
 
 
     .headerHomeVol{
