@@ -99,11 +99,8 @@
     .topbar{
         overflow: visible;
         top: 0;
-    
-        
         width: 100%;
-        height: 20vh;
-        
+        height: 17vh;
         position: fixed;
         background-color: white;
         background-image: url('../resources/druzabnik_digonala.png');
@@ -115,7 +112,6 @@
     .underbar{
         width: 100%;
         height: 100%;
-    
         padding-top: 25vh;
         background-image: url('../resources/main_image_klopca.jpg');
         background-repeat: no-repeat;
@@ -124,13 +120,14 @@
     }
     
     .credits{
-        position: fixed;
+       position: fixed;
        left: 0;
        bottom: 0;
        width: 100%;
        background-color: rgb(255, 255, 255);
        color: rgb(23, 59, 94);
        text-align: center;
+       font-family: 'Inter', sans-serif;
     }
     #prvaForm1{
         padding-top: 1em;
@@ -142,21 +139,38 @@
     
     #descriptionText{
         color: white;
-        font-weight: bold;
-        position: relative;top:-5vh;
-        font-size: 1em;
-        margin-top: 23.5vh;
+        position: relative;
+        font-weight: 100;
+        margin-top: 5vh;
         text-align: center;
+        font-size: 11px;
+        font-family: 'Inter';
+        font-stretch: 25;
+    }
+    
+    #descriptionText1{
+        color: white;
+        position: relative;
+        font-weight: 100;
+        margin-top: 22.5vh;
+        text-align: center;
+        font-size: 11px;
+        font-family: 'Inter';
+        font-stretch: 25;
     }
     
     #prvaStranButton1{
         background-color: #41b0cd;
         color: white;
-        position: relative;top:-5vh;
-        margin-left: 35vw;
-        width: 30vw;
+        border-color:white;
+        position: relative;
+        top: -0.5vh;
+        margin-left: 26vw;
+        width: 52vw;
         height: 5vh;
-        border-radius: 10px;
+        border-radius: 6px;
+        text-align: center;
+        font-family: 'Inter', sans-serif;
     }
     #prvaStranButton1:hover{
         background: #173b5e;
@@ -166,11 +180,15 @@
     #prvaStranButton2{
         background-color: #41b0cd;
         color: white;
-        position: relative;top:-5vh;
-        margin-left: 35vw;
-        width: 30vw;
+        border-color:white;
+        position: relative;
+        top: -3.5vh;
+        margin-left: 26vw;
+        width: 52vw;
         height: 5vh;
-        border-radius: 10px;
+        border-radius: 6px;
+        text-align: center;
+        font-family: 'Inter', sans-serif;
     }
     #prvaStranButton2:hover{
         background: #173b5e;

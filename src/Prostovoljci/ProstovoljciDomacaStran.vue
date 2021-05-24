@@ -5,27 +5,22 @@
 
     <div class = "underbar"> 
 
-        <label class= "prijavaProstovoljci">Prijava Prostovoljci</label>
+        <label class= "prijavaProstovoljci">Že imate račun?</label>
+        <label class= "prijavaProstovoljci1">VPIS</label>
             
         <form @submit.prevent="handleSubmit">
-            <div class="E-mail">
-                <label class= "email-text" for="exampleInputEmail1"> Uporabnisko Ime </label>
-                <input type="uporabniskoIme" v-model="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Vnesi email">
+            <div class="E-mailRegistracijaProstovoljci">
+                <input type="uporabniskoIme" v-model="username"  id="exampleInputEmail12" aria-describedby="emailHelp" placeholder=" Uporabniško ime">
             </div>
-            <div class="Geslo">
-                <label class= "geslo-text" for="exampleInputPassword1">Geslo</label>
-                <input type="password" v-model="password" class="form-control" id="exampleInputPassword1" placeholder="Geslo">
+            <div class="GesloRegistracijaProstovoljci">
+                <input type="password" v-model="password"  id="exampleInputPassword12" placeholder=" Geslo">
             </div>
-            <button id ="btnPrijava" type="submit">Prijava</button>
+            <button id ="btnPrijava1" type="submit">Nadaljuj</button>
         </form>
         <br>
+        <label class= "prijavaProstovoljci2">Še nimate računa?</label>
         <form action = "registracijaProstovoljci">
-            <label class= "registracija-text">Ali še niste uporabnik?</label>
-            <button id = "btnRegistracija" type="submit">Registracija</button>
-        </form>
-
-        <form action = "/">
-                <button id="btnNazaj2" type="submit">Nazaj</button>
+            <button id = "btnRegistracija1" type="submit">Registracija</button>
         </form>
     </div>
 </div>

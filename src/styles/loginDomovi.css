@@ -142,58 +142,85 @@
         }
         .prijavaDom{
             color: white;
-            font-size: 30px;
-            height: 12vh;
+            font-size: 11px;
             display: flex;
+            justify-content: center;
+            font-family: 'Inter', sans-serif;
+            position: relative;
+            top: 18vh;
+        }
+
+        .prijavaDom1{
+            color: white;
+            font-size: 22px;
+            font-weight: bolder;
+            position: relative;
+            display: flex;
+            top: 19.75vh;
+            font-family: 'Inter', sans-serif;
             justify-content: center;
         }
 
         .E-mail{
-            margin-left: 40vw;
-            width: 26vw;
-            height: 0vh;
-            position: relative;top:0vh;
+            margin: auto;
+            width: 60vw;
+            height: 5vh;
+            position: relative;
+            top: 21.5vh;
+            justify-content: center;
+            display: flex;
+            font-family: 'Inter', sans-serif;
+            font-style: normal;
         }
         .Geslo{
-            margin-left: 40vw;
-            width: 26vw;
-            height: 4vh;
-            position: relative;top:10vh;
-        }
-        .email-text{
-            margin-left: -4vw;
-            color: white;
-            position: relative;top:0vh;
-            display: flex;
-            justify-content: center;
-            width: 34vw;
-        }
-        .geslo-text{
-            color: white;
-            position: relative;top:1vh;
-            display: flex;
-            justify-content: center;
-            width: 10vw;
-        }
-        .registracija-text{
-            margin-left: 27vw;
-            width: 50vw;
-            height: 1vh;
+            margin: auto;
+            width: 60vw;
+            height: 5vh;
             position: relative;
-            top: 18vh;
-            display: flex;
+            top: 23vh;
             justify-content: center;
-            color: white;
+            display: flex;
+            font-family: 'Inter', sans-serif;
+            font-style: normal;
+        }
+
+        #exampleInputEmail1{
+            border-style: none;
+        }
+    
+        #exampleInputPassword1{
+            border-style: none;
+        }
+    
+        ::placeholder{
+            color: #173b5e;
+            margin-left: 4vh;
+        } 
+
+        .registracija-text{
+           color: white;
+            font-size: 11px;
+            margin-left: 11vh;
+            width: 60vw;
+            top: 23vh;
+            position: relative;
+            font-family: 'Inter', sans-serif;
+            text-align: center;
         }
         #btnPrijava{
             background-color: #41b0cd;
             color: white;
-            position: relative;top:18vh;
-            margin-left: 40vw;
-            width: 26vw;
+            position: relative;
+            top: 25vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 59.5vw;
             height: 5vh;
-            border-radius: 10px;
             border-color:white;
+            border-radius: 6px;
+            font-family: 'Inter', sans-serif;
+            margin: auto;
         }
 
         #btnPrijava:hover{
@@ -202,14 +229,18 @@
         }
         #btnRegistracija{
             background-color: #41b0cd;
-            color: white;
-            position: relative;
-            top:20vh;
-            margin-left: 40vw;
-            width: 26vw;
-            height: 5vh;
-            border-radius: 10px;
-            border-color:white;
+        color: white;
+        position: relative;
+        top: 26.75vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 59.5vw;
+        height: 5vh;
+        border-color:white;
+        border-radius: 6px;
+        font-family: 'Inter', sans-serif;
+        margin: auto;
         }
         #btnRegistracija:hover{
             background: #173b5e;

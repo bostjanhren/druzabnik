@@ -5,28 +5,22 @@
 
         <div class = "underbar"> 
 
-            <label class= "prijavaDom">Prijava Domovi</label>
-           
+            <label class= "prijavaDom">Že imate račun?</label>
+            <label class= "prijavaDom1">VPIS</label>
 
             <form action = "/domacastrandom">
                 <div class="E-mail">
-                    <label class= "email-text" for="exampleInputEmail1">E-poštni naslov</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Vnesi email">
+                    <input type="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder=" Uporabniško ime">
                 </div>
                 <div class="Geslo">
-                    <label class= "geslo-text" for="exampleInputPassword1">Geslo</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Geslo">
+                    <input type="password" id="exampleInputPassword1" placeholder=" Geslo">
                 </div>
-                <button id="btnPrijava" type="submit">Prijava</button>
+                <button id="btnPrijava" type="submit">Nadaljuj</button>
             </form>
             <br>
-            
+            <label class= "registracija-text">Še nimate računa?</label>
             <form action = "/registracijadom">
-                <label class= "registracija-text">Ali še niste uporabnik?</label>
                 <button id="btnRegistracija" type="submit">Registracija</button>
-            </form>
-            <form action = "/">
-                <button id="btnNazaj" type="submit">Nazaj</button>
             </form>
         </div>
         <div style="clear: both;"></div>

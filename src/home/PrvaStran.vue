@@ -5,8 +5,10 @@
 
         <div class = "underbar">
             
-            <p id="descriptionText">Povezujemo prostovoljce z več kot 20 domovi za ostarele</p>
+            <p id="descriptionText">Povezujemo prostovoljce z več kot 20 domovi za starejše.</p>
             
+            <p id="descriptionText1">Nadaljujte kot</p>
+
             <form id = "prvaForm1" action="/prostovoljec">
                 <div class="form-group">
                 <button id="prvaStranButton1" :disabled="loading">

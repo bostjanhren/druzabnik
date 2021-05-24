@@ -141,16 +141,17 @@
         height: 100vh;
         
     }
-    .topbar{
+
+   .topbar{
         overflow: visible;
         top: 0;
-        width: 100%
-        height: 17vh;
+        width: 100%;
+        height: 15vh;
         position: fixed;
         background-color: white;
         background-image: url('../resources/druzabnik_digonala.png');
         background-repeat: no-repeat;
-        background-size: auto 22vh;
+        background-size: auto 25vh;
         background-position: center;
     }
     
@@ -166,44 +167,77 @@
 
     .registracijaDom{
         color: white;
-        font-size: 30px;
+        font-size: 22px;
+        font-weight: bolder;
+        top: 22.8vh;
         display: flex;
         justify-content: center;
-    }
-
-    .registracijaDom-tekst{
-        color: white;
-        font-size: 20px;
-        display: flex;
-        justify-content: center;
+        position: relative;
+        font-family: 'Inter', sans-serif;
     }
 
     .registacijaImeDom{
         margin: auto;
         width: 41vw;
         height: 5vh;
-        position: relative;top:7vh;
+        position: relative;
+        top: 24.5vh;
+        display: flex;
+        justify-content: center;
+        font-family: 'Inter', sans-serif;
+    }
+
+    #exampleRegistracijaImeDom1{
+        border-style: none;
     }
 
     .registracijaNaslovDom{
         margin: auto;
         width: 41vw;
         height: 5vh;
-        position: relative;top:11vh;
+        position: relative;
+        top: 27.5vh;
+        border-radius: 0%;
+        display: flex;
+        justify-content: center;
+        font-family: 'Inter', sans-serif;
     }
    
+    #exampleRegistracijaPostniNaslovDom1{
+        border-style: none;
+    }
+
     .registracijaPostniNaslovDom{
         margin: auto;
         width: 41vw;
         height: 5vh;
-        position: relative;top:11vh;
+        position: relative;
+        top: 26vh;
+        border-radius: 0%;
+        display: flex;
+        justify-content: center;
+        font-family: 'Inter', sans-serif;
     }
 
     .registracijaGesloDom{
         margin: auto;
         width: 41vw;
         height: 5vh;
-        position: relative;top:19vh;
+        position: relative;
+        top: 27.5vh;
+        justify-content: center;
+        display: flex;
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+    }
+
+    #exampleRegistracijaGesloDom1{
+        border-style: none;
+    }
+
+    ::placeholder{
+        color: #173b5e;
+        margin-left: 4vh;
     }
 
     .registracijaImeDom1-text{
@@ -234,34 +268,21 @@
     #btnRegistracijaDom{
         background-color: #41b0cd;
         color: white;
-        position: relative;top:28vh;
+        position: relative;
+        top: 35vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 41vw;
+        width: 59.5vw;
         height: 5vh;
-        border-radius: 10px;
         border-color:white;
+        border-radius: 6px;
+        font-family: 'Inter', sans-serif;
     }
 
     #btnRegistracijaDom{
-        background: #173b5e;
+        background: #41b0cd;
         margin: auto;
-        cursor: pointer;
-    }
-    
-    #btnNazaj4{
-        background-color: #41b0cd;
-        color: white;
-        position: relative;top: -65.7vh;
-        margin-left: 1vw;
-        width: 10vw;
-        height: 5vh;
-        border-radius: 10px;
-        border-color:white;
-    }
-    #btnNazaj4:hover{
-        background: #173b5e;
         cursor: pointer;
     }
 }

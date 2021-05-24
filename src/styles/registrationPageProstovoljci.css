@@ -45,7 +45,8 @@
         margin-left: 40vw;
         width: 20vw;
         height: 5vh;
-        position: relative;top:10vh;
+        position: relative;
+        top:10vh;
     }
    
     .Ime{
@@ -167,21 +168,24 @@
     }
     .registracijaProstovoljci1{
         color: white;
-        font-size: 30px;
-        font-weight: 625;
-        top: 20vh;
+        font-size: 22px;
+        font-weight: bolder;
+        top: 22.8vh;
         display: flex;
         justify-content: center;
+        position: relative;
+        font-family: 'Inter', sans-serif;
     }
 
     .UporabniskoIme{
         margin: auto;
         width: 41vw;
-        height: 4vh;
+        height: 5vh;
         position: relative;
-        top: 23.95vh;
+        top: 24.5vh;
         display: flex;
         justify-content: center;
+        font-family: 'Inter', sans-serif;
     }
 
     #exampleUporabniskoIme1{
@@ -191,12 +195,24 @@
     .Ime{
         margin: auto;
         width: 41vw;
-        height: 4vh;
+        height: 5vh;
         position: relative;
-        top: 25.95vh;
+        top: 26vh;
         border-radius: 0%;
         display: flex;
         justify-content: center;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .pogojiUporabe{
+        color: white;
+        font-size: 11px;
+        margin-left: 11vh;
+        width: 60vw;
+        top: 34vh;
+        position: relative;
+        font-family: 'Inter', sans-serif;
+        text-align: center;
     }
 
     #exampleIme1{
@@ -206,11 +222,13 @@
     .GesloProstovoljci{
         margin: auto;
         width: 41vw;
-        height: 4vh;
+        height: 5vh;
         position: relative;
-        top: 27.95vh;
+        top: 27.5vh;
         justify-content: center;
         display: flex;
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
     }
 
     #exampleGesloProstovoljci1{
@@ -219,21 +237,23 @@
     }
     
     ::placeholder{
-        color: black;
+        color: #173b5e;
+        margin-left: 4vh;
     }
 
     #btnRegistracijaProstovoljci{
         background-color: #41b0cd;
         color: white;
         position: relative;
-        top:39.3vh;
+        top: 35vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 41vw;
+        width: 59.5vw;
         height: 5vh;
         border-color:white;
         border-radius: 6px;
+        font-family: 'Inter', sans-serif;
     }
 
     #btnRegistracijaProstovoljci{
