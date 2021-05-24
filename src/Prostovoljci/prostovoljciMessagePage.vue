@@ -2,10 +2,10 @@
     <div id = "prostovoljciMessageStil">
 
         <div class = "topBarProstovoljci">
-            <h1 class="headerHomeVol">Sporočila</h1> 
+            <h1 class="headerHomeVol">SPOROČILA</h1> 
 
             <div class="dropdown">
-                <b-dropdown class=dropdownIcon text="Menu" size="lg" variant="info">
+                <b-dropdown class=dropdownIcon text="" size="lg">
                     <b-dropdown-item href="/prostovoljciDoma" >Domovi</b-dropdown-item>
                     <!--<b-dropdown-item href="/prostovoljciInbox" >Sporočila</b-dropdown-item>-->
                     <b-dropdown-item href="/prostovoljciInbox">Sporočila</b-dropdown-item>
@@ -14,14 +14,26 @@
                     <b-dropdown-item @click="odjavaClick">Odjava</b-dropdown-item>
                 </b-dropdown>
             </div>
+
+            <!--
+            <div class="dropdown">
+                <button class="dropbtn"></button>
+                <div class="dropdown-content">
+                    <a href="/prostovoljciDoma">Domovi</a>
+                    <a href="/prostovoljciInbox">Sporočila</a>
+                    <a href="/prostovoljciProfile">Profil</a>
+                    <a @click="odjavaClick">Odjava</a>
+                </div>
+            </div>
+            -->
         </div>
 
         <div class = "underBarProstovoljciChat"> 
-            <h2 id="chatTitle">Pogovor: Kranj</h2>
+            <h2 id="chatTitle">{{naslov}}</h2>
 
             <div id = "conversation">
                 <div v-for="message in messagesDisp" v-bind:key="message" class="for-loop-messages"> 
-                    <div v-if="message.fromid == '609260f8d6b89a00157e97e3'" class="messageRight">
+                    <div v-if="message.fromid == me.id" class="messageRight">
                         
                             {{message.text}}
                         
@@ -35,8 +47,8 @@
             </div>
             <div id = "bottomDiv">
             <form class = "form-inline" @submit.prevent="newMessageSubmit" id = "newMessage" action="placeholder">
-                <input type="text" v-model="tekst" id="tekst" name="fname" value=""><br>
-                <input type="submit" id = "tekstPoslji" value="Pošlji">
+                <input type="text" v-model="tekst" id="tekst" name="fname" value="" placeholder="..."><br>
+                <input type="submit" id = "tekstPoslji" value="">
             </form>
             </div> 
         </div> 
@@ -52,13 +64,20 @@
         data(){
             return{
              messagesDisp:[],
-             tekst:""
+             tekst:"",
+             me:{},
+             to:{},
+             naslov:""
             }
         },
         created(){
+            this.me = JSON.parse(localStorage.getItem("currentUser"));
             var meId = JSON.parse(localStorage.getItem("currentUser")).id;
-
+            this.to = JSON.parse(localStorage.getItem("pickedHome"));
             var toId = JSON.parse(localStorage.getItem("pickedHome")).id;
+
+            this.naslov = "DOM - " + this.to.homeName.toUpperCase();
+
             var messagesSelected = [];
             this.$http.get('https://druzabnikapi.herokuapp.com/messages').then(function(data){
                 var messages = data.body;
