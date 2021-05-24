@@ -41,7 +41,7 @@
                         
                         
 
-                        <form action="/vstopnaStran">
+                        <form action="/terminiDoma">
                             <button class="btnHomeSelection">
                                 Izberi termin
                             </button>

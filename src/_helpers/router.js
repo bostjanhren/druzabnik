@@ -24,6 +24,7 @@ import DomoviNabiralnik from '@/Domovi/DomoviNabiralnik';
 import instancaChata from '@/Chat/instancaChata';
 import DomoviNovTermin from '@/Domovi/DomoviNovTermin';
 import instancaChataProstovoljec from '@/Chat/instancaChataProstovoljec';
+import ProstovoljciTerminiDoma from '@/Prostovoljci/ProstovoljciTerminiDoma';
 
 
 Vue.use(Router);
@@ -125,6 +126,10 @@ export const router = new Router({
         {
             path: '/instancaSporocilaProstovoljec',
             component:instancaChataProstovoljec
+        },
+        {
+            path: '/terminiDoma',
+            component:ProstovoljciTerminiDoma
         },
 
         // otherwise redirect to home
