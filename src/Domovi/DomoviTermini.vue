@@ -1,7 +1,7 @@
 <template>
     <div class = "urejanjeTerminov">
         <div class = "topBarProstovoljci">
-            <h1 class="headerHomeVol">Urejanje terminov za obsike</h1> 
+            <h1 class="headerHomeVol">Urejanje terminov za obiske</h1> 
 
             <div class="dropdown">
                 <b-dropdown class=dropdownIcon text="Menu" size="lg" variant="info">
@@ -15,6 +15,17 @@
 
         <div class = "underBarProstovoljci"> 
             {{ create2DList(blogs,currentUser.id) }}
+            
+            <div class ="edit-pic" @click="editDates()">
+                <div class="dodajTerminText">dodaj termin</div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
 
 
             <div v-for="(date, index) in listDates" v-bind:key="date" class="for-loop"> 
@@ -39,6 +50,7 @@
 </template>
 
 <script>
+    import { router } from '@/_helpers';
     export default {
         data: () => ({
              blogs:[],
@@ -90,6 +102,9 @@
                 this.listTimes = arrayWithTimes
                 this.listDates = listOfDates
                 
+            },
+            editDates(){
+                router.push('/addDate')
             }
         }
     }

@@ -19,11 +19,11 @@
         <div class = "underBarProstovoljci"> 
             <div v-for="blog in blogs" v-bind:key="blog" class="for-loop"> 
                 <div>
-                    <b-button class="homesBtn" v-b-toggle="'accordison-' + blog.homeName">{{ blog.homeName }}</b-button>
-                    <b-collapse :id="'accordison-' + blog.homeName" :class="'accordison-' + blog.homeName">
-                        <label class= "HomeNameText">{{ blog.homeName }}</label>
+                    <b-button class="homesBtn" v-b-toggle="'accordison-' + blog.username">{{ blog.username }}</b-button>
+                    <b-collapse :id="'accordison-' + blog.username" :class="'accordison-' + blog.username">
+                        <label class= "HomeNameText">{{ blog.username }}</label>
                         <div>
-                            <p @click="onHomeClick(blog.homeName)" tag="button" class = "btnHomeSelect">Izberi</p>
+                            <p @click="onHomeClick(blog.username)" tag="button" class = "btnHomeSelect">Izberi</p>
                         </div>    
                     </b-collapse>
                 </div>
@@ -59,7 +59,7 @@
                 .then(function(data){
                     var homes = data.body;
                     homes.forEach(home=>{
-                        if(home.homeName == nameofHome){
+                        if(home.username == nameofHome){
                             localStorage.removeItem('pickedHome');
                             localStorage.setItem('pickedHome', JSON.stringify(home));
                             router.push('/prostovoljciInfoZaDom')

@@ -11,6 +11,7 @@
     "vue": "^2.6.12",
     "vue-resource": "^1.5.2",
     "vue-router": "^3.0.2",
+    "vuejs-datepicker": "^1.6.2",
     "vuelidate": "^0.7.4",
     "vuetify": "^2.4.11"
   },

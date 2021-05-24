@@ -22,17 +22,49 @@
         text-align: center;
         padding-top: 2.5vh;
     }
+    .edit-pic{
+        overflow: visible;
 
-
-
+        width: 40%;
+        height: 15vh;
+        
+        position: fixed;
+        background-color: white;
+        background-image: url('../resources/edit_pik.png');
+        background-repeat: no-repeat;
+        background-size: auto 10vh;
+        background-position: center;
+        margin-left: 37.5vw;
+    }
+    .edit-pic:hover{
+        cursor: pointer;
+    }
+    .dodajTerminText{
+        font-size: 25px;
+        margin-right: 30vw;
+        text-align: center;
+        margin-top: 5vh;
+    }
+    .datePick{
+        height: 20%;
+        position: fixed;
+        left: 42.5vw;
+    }
+    .timeInput{
+        margin-left: 40.5vw;
+        width: 20vw;
+        height: 5vh;
+        position: relative;top:14vh;
+    }
+    .dodajTermin{
+        margin-top: 20vh;
+        margin-left: 31.5vw;
+        font-size: 25px;
+        margin-right: 30vw;
+        text-align: center;
+    }
 
 }
-
-
-
-
-
-
 
 @media only screen and (max-width: 700px) {
 
