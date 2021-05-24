@@ -1,46 +1,112 @@
 <template>
-    <div>
-        <h1>Urejanje terminov za obsike</h1>
-        
-        <br>
+    <div class = "urejanjeTerminov">
+        <div class = "topBarProstovoljci">
+            <h1 class="headerHomeVol">Urejanje terminov za obsike</h1> 
 
-    <div class="d-flex flex-row bd-highlight mb-3">
-        <div class="p-2 bd-highlight">
-            <div class="card" style="width: 18rem;">
-                <div class="card-header">
-                    Ponedeljek 26.04.2021
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">11-12</li>
-                    <li class="list-group-item">12-13</li>
-                    <li class="list-group-item">15-16</li>
-                </ul>
+            <div class="dropdown">
+                <b-dropdown class=dropdownIcon text="Menu" size="lg" variant="info">
+                    <b-dropdown-item href="/nabiralnikdom">Sporočila</b-dropdown-item>
+                    <b-dropdown-item href="/profilnastrandom">Profil</b-dropdown-item>
+                    <b-dropdown-item href="/domdolocitermin">Termini</b-dropdown-item>
+                    <b-dropdown-item href="/vstopnaStran">Odjava</b-dropdown-item>
+                </b-dropdown>
             </div>
+
+
         </div>
-        <div class="p-2 bd-highlight">
-            <div class="card" style="width: 18rem;">
-                <div class="card-header">
-                    Torek 27.04.2021
+
+        <div class = "underBarProstovoljci"> 
+
+            {{ create2DList(blogs) }}
+
+
+
+            <div v-for="(date, index) in listDates" v-bind:key="date" class="for-loop"> 
+                
+                <div>
+                    <b-button class="homesBtn" v-b-toggle="'accordison-' + date">{{ dateSplit(date) }}</b-button>
+                    <b-collapse :id="'accordison-' + date" :class="'accordison-' + date">
+                        <div v-for="time in listTimes[index]" v-bind:key="time">
+                            <label  class= "HomeNameText">{{ time }}</label>
+                        </div>
+                        
+                        <div>
+                            <!--<p @click="onHomeClick(blog.homeName)" tag="button" class = "btnHomeSelect">Izberi</p>-->
+                        </div>    
+                    </b-collapse>
                 </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">11-12</li>
-                    <li class="list-group-item">12-13</li>
-                    <li class="list-group-item">15-16</li>
-                </ul>
             </div>
+
+
+
+
+
+            <!---
+            <div v-for="blog in blogs" v-bind:key="blog" class="for-loop"> 
+                
+                <div>
+                    <b-button class="homesBtn" v-b-toggle="'accordison-' + blog.id">{{ dateSplit(blog.appointmentDateTime) }}</b-button>
+                    <b-collapse :id="'accordison-' + blog.id" :class="'accordison-' + blog.id">
+                        <label class= "HomeNameText">{{ blog.times }}</label>
+                        <div>
+
+                        </div>    
+                    </b-collapse>
+                </div>
+            </div> --->
+
         </div>
-        
-    </div>
 
-    <form action="/domacastrandom">
-        <button type="submit" class="btn btn-primary">Shrani spremembe</button>
-    </form>
-    
-    <br>
-
-    <form action="/novTermin">
-        <button type="submit" class="btn btn-primary">Nov Termin</button>
-    </form>
 
     </div>
 </template>
+
+<script>
+    export default {
+        data: () => ({
+             blogs:[],
+             listDates:[],
+             listTimes: []
+        }),
+        created(){
+            this.$http.get('https://druzabnikapi.herokuapp.com/events').then(function(data){
+                this.blogs = data.body;
+            })
+        },
+        methods: {
+            dateSplit(date){
+                var res = date.split("T");
+                var res2 = res[0].split("-");
+                var res3 = res2[2] + "." + res2[1] + "." + res2[0];
+                return res3
+            },
+            create2DList(data){
+                var listOfDates = []
+                var i;
+                for(i = 0; i < data.length; i++){
+                    if(!listOfDates.includes(data[i].appointmentDateTime)){
+                        listOfDates.push(data[i].appointmentDateTime)
+                    }
+                }
+
+                var arrayWithTimes = []
+                var times = []
+                var j;
+                for(j = 0; j < listOfDates.length; j++){
+                    for(i = 0; i < data.length; i++){
+                        if (data[i].appointmentDateTime == listOfDates[j]){
+                            if(!times.includes(data[i].times)){
+                                times.push(data[i].times)
+                            }
+                        } 
+                    }
+                    arrayWithTimes.push(times)
+                    times = []
+                }
+                this.listTimes = arrayWithTimes
+                this.listDates = listOfDates
+                
+            }
+        }
+    }
+</script>
