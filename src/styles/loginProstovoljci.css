@@ -11,7 +11,45 @@
         display: flex;
         justify-content: center;
     }
+
+    .prijavaProstovoljci1{
+        color: white;
+        font-size: 45px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .E-mailRegistracijaProstovoljci{
+        margin: auto;
+        width: 41vw;
+        height: 4vh;
+        position: relative;
+        top: 29.5vh;
+        justify-content: center;
+        display: flex;
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+    }
+
+    .GesloRegistracijaProstovoljci{
+        margin: auto;
+        width: 41vw;
+        height: 4vh;
+        position: relative;
+        top: 29.5vh;
+        justify-content: center;
+        display: flex;
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+    }
     
+    .prijavaProstovoljci2{
+        color: white;
+        font-size: 45px;
+        display: flex;
+        justify-content: center;
+    }
+
     #btnNazaj2{
         background-color: #41b0cd;
         color: white;
@@ -37,24 +75,112 @@
 
     .prijavaProstovoljci{
         color: white;
-        font-size: 30px;
-        height: 12vh;
+        font-size: 11px;
         display: flex;
+        justify-content: center;
+        font-family: 'Inter', sans-serif;
+        position: relative;
+        top: 18vh;
+    }
+
+    .prijavaProstovoljci1{
+        color: white;
+        font-size: 22px;
+        font-weight: bolder;
+        position: relative;
+        display: flex;
+        top: 19.75vh;
+        font-family: 'Inter', sans-serif;
         justify-content: center;
     }
 
-    #btnNazaj2{
+    .E-mailRegistracijaProstovoljci{
+        margin: auto;
+        width: 30vw;
+        height: 5vh;
+        position: relative;
+        top: 21.5vh;
+        justify-content: center;
+        display: flex;
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+    }
+
+    #exampleInputEmail12{
+        border-style: none;
+    }
+
+    #exampleInputPassword12{
+        border-style: none;
+    }
+
+    ::placeholder{
+        color: #173b5e;
+        margin-left: 4vh;
+    }
+
+    .GesloRegistracijaProstovoljci{
+        margin: auto;
+        width: 30vw;
+        height: 5vh;
+        position: relative;
+        top: 23vh;
+        justify-content: center;
+        display: flex;
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+    }
+    
+    .prijavaProstovoljci2{
+        color: white;
+        font-size: 11px;
+        margin-left: 11vh;
+        width: 60vw;
+        top: 23vh;
+        position: relative;
+        font-family: 'Inter', sans-serif;
+        text-align: center;
+    }
+
+    #btnRegistracija1{
         background-color: #41b0cd;
         color: white;
-        position: relative;top:-40vh;
-        margin-left: 1vw;
-        width: 20vw;
+        position: relative;
+        top: 26.75vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 59.5vw;
         height: 5vh;
-        border-radius: 10px;
         border-color:white;
+        border-radius: 6px;
+        font-family: 'Inter', sans-serif;
+        margin: auto;
     }
-    #btnNazaj2:hover{
-        background: #173b5e;
+
+    #btnRegistracija1:hover{
+        background: #41b0cd;
+        cursor: pointer;
+    }
+
+    #btnPrijava1{
+        background-color: #41b0cd;
+        color: white;
+        position: relative;
+        top: 25vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 59.5vw;
+        height: 5vh;
+        border-color:white;
+        border-radius: 6px;
+        font-family: 'Inter', sans-serif;
+        margin: auto;
+    }
+    
+    #btnPrijava1:hover{
+        background: #41b0cd;
         cursor: pointer;
     }
     
