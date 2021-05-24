@@ -8,7 +8,7 @@
           <input type = "uporabniskoIme" v-model="username" id = "exampleUporabniskoIme1" aria-describedby="uporabniskoImeHelp" placeholder=" Uporabnisko ime">
         </div>
         <div class = "Ime">
-          <input type = "Ime1" v-model="firstName" id = "exampleIme1" aria-describedby="ImeHelp" placeholder=" e-naslov">
+          <input type = "Ime1" v-model="address" id = "exampleIme1" aria-describedby="ImeHelp" placeholder=" e-naslov">
         </div>
         <div class="GesloProstovoljci">
           <input type="GesloProstovoljci1" v-model="password" id="exampleGesloProstovoljci1" placeholder=" Geslo">
@@ -31,8 +31,7 @@ export default {
     return {
       username: "",
       password: "",
-      firstName: "",
-      lastName: ""
+      address: ""
     };
   },
   methods: {
@@ -40,8 +39,7 @@ export default {
           var user = 
           {
               "username": this.username,
-              "firstName": this.firstName,
-              "lastName": this.lastName,
+              "address": this.address,
               "password": this.password
           }
           authenticationService.registerUser(user).then( data =>{

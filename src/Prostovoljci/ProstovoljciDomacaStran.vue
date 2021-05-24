@@ -40,7 +40,7 @@ export default {
   },
   methods: {
         handleSubmit () {
-            console.log("Logging in " + this.username + " " + this.password)
+            //console.log("Logging in " + this.username + " " + this.password)
         authenticationService.login(this.username, this.password)
             .then(
             user => router.push('/prostovoljciDoma'),
