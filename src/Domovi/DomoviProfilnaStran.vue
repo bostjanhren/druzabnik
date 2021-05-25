@@ -1,26 +1,70 @@
 <template>
-    <div>
-        <h1>Urejanje podatkov ustanove</h1>
-        
-        <br>
-    <form action = "/domacastrandom">
-        <div class="form-group">
-            <label for="exampleInputEmail1">Dodaj telefonsko številko ustanove</label>
-            <input type="tel" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Telefonska številka">
+    <div id = "prostovoljciMessageStil">
+
+        <div class = "topBarProstovoljci">
+            <h1 class="headerHomeVol">O DOMU</h1> 
+            
+            <div class="dropdown">
+                <input id="dropcheck" class="dropcheck" type="checkbox">
+                <label for="dropcheck" class="dropbtn"></label>
+                <div class="dropdown-content">
+                    <a href="/nabiralnikdom">Sporočila</a>
+                    <a href="/prostovoljciInbox">Profil</a>
+                    <a href="/domdolocitermin">Termini</a>
+                    <a @click="odjavaClick">Odjava</a>
+                </div>
+            </div>
+            
         </div>
-        <div class="form-group">
-            <label for="address">Spremeni naslov ustanove</label>
-            <input type="text" class="form-control" id="InputAddress" placeholder="Naslov ustanove">
+
+        <div class = "underBarDomoviEditPage"> 
+            <h2 id = "domProfileTitle">PODATKI</h2>
+
+            <div class="ImeEdit">
+                <textarea  rows="10" cols="30" v-model="text" id="exampleInputEmail1"  placeholder="Opis o domu ..."></textarea>
+            </div>
+
+            <br>
+          
+            <form @submit.prevent="newMessageSubmit">
+                <div class="form-group">
+                <button class="btnshranidesc" :disabled="loading">
+                    <span class="spinner-border spinner-border-sm" v-show="loading"></span>
+                    <span>Shrani</span>
+                </button>
+                </div>
+            </form>
+
+            <br>
+
+
         </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Spremeni geslo</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Opis ustanove</label>
-            <textarea class="form-control" aria-label="With textarea"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Posodobi podatke</button>
-    </form>
     </div>
 </template>
+
+<script>
+    import config from 'config';
+    import { requestOptions, handleResponse } from '@/_helpers';
+    import { router } from '@/_helpers';
+    import { authenticationService } from '@/_services';
+    export default {
+        data(){
+            return{
+             
+            }
+        },
+        created(){
+            
+        },
+        methods: {
+            odjavaClick(){
+                console.log("Odjava");
+                authenticationService.logout();
+                router.push("/vstopnaStran");
+            },
+            newMessageSubmit(){
+                router.push("/domdolocitermin");
+            }
+        }
+    }
+</script>

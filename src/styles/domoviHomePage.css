@@ -97,5 +97,46 @@
         margin-top: -6vh;
         margin-right: 10vw;
     }
+
+
+    .underBarDomoviEditPage{
+        
+            width: 100%;
+            height: 100%;
+        
+            padding-top: 20vh;
+    
+            
+            background-repeat: no-repeat;
+            background-size: auto 175vh;
+            background-position: center; 
+            text-align: center;
+    }
+
+    .underBarDomoviEditPage #domProfileTitle{
+        text-align: center;
+        margin-bottom: 4vh;
+        margin-top: 4vh;
+        color: white;
+        font-size: 5vw;
+        font-weight: bold;
+        font-family: 'Inter', sans-serif;
+    }
+
+    textarea::placeholder {
+        color: rgb(0, 0, 0);  
+    }
+    .underBarDomoviEditPage .ImeEdit{
+    }
+
+    .underBarDomoviEditPage .btnshranidesc{
+        background-color: #41b0cd;
+        color: white;
+        width: 45vw;
+        height: 4.5vh;
+        border-radius: 5px;
+        border-style: solid;
+        border-color:white;
+    }
     
 }
