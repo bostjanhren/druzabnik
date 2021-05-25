@@ -2,7 +2,7 @@
     <div id = "prostovoljciMessageStil">
 
         <div class = "topBarProstovoljci">
-            <h1 class="headerHomeVol3">SPOROČILA</h1> 
+            <h1 class="headerHomeVol">SPOROČILA</h1> 
             
             <div class="dropdown">
                 <input id="dropcheck" class="dropcheck" type="checkbox">

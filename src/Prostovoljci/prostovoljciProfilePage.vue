@@ -18,12 +18,7 @@
         </div>
 
         <div class = "underBarProstovoljciEditPage"> 
-            <form>
-                <div class="Slika">
-                    <p>Prostor za dodajanje slike</p>
-                    <button>Slika</button>
-                </div>
-            </form>
+
 
             <div class="ImeEdit">
                 <label class= "email-text" for="exampleInputEmail1"> Ime </label>
@@ -44,10 +39,6 @@
 
             <!--- TODO: urediti fielde in pullat info od current logged in userja in slika-->
 
-            <br>
-            <br>
-            <br>
-            <br>
             <br>
             <br>
             <br>

@@ -1,7 +1,7 @@
 <template>
     <div class = "urejanjeTerminov">
         <div class = "topBarProstovoljci">
-            <h1 class="headerHomeVol">Urejanje terminov za obsike</h1> 
+            <h1 class="headerHomeVol">Termini</h1> 
 
             <div class="dropdown">
                 <input id="dropcheck" class="dropcheck" type="checkbox">
@@ -26,15 +26,13 @@
                     <b-button class="homesBtn" v-b-toggle="'accordison-' + date">{{ dateSplit(date) }}</b-button>
                     <b-collapse :id="'accordison-' + date" class="dropDownTermini">
                         <div v-for="time in listTimes[index]" v-bind:key="time">
-                            <button id="btnIzbiraTermina" type="submit" @click="izberiTermin(listTimes[index], date)">{{ time }}</button>
+                            <button id="btnIzbiraTermina" type="submit" @click="izberiTermin(time, dateSplit(date))">{{ time }}</button>
                             
-                        </div>
-                        
-                        <div>
-                            <!--<p @click="onHomeClick(blog.homeName)" tag="button" class = "btnHomeSelect">Izberi</p>-->
-                        </div>    
+                        </div>  
                     </b-collapse>
+                    
                 </div>
+               
             </div>
         </div>
 
@@ -104,6 +102,15 @@
                     homeid: this.pickedHome.id,
                     times: timeSc,
                 })*/
+                console.log(JSON.parse(localStorage.getItem("currentUser")))
+                console.log(JSON.parse(localStorage.getItem("pickedHome")))
+                var message = "Pozdravljeni dom " + JSON.parse(localStorage.getItem("pickedHome")).username + " prijavil/a sem se na vaš Termin dne " + dateSc + "ob" + timeSc
+                this.$http.post('https://druzabnikapi.herokuapp.com/messages',{
+                    text: message,
+                    fromid: JSON.parse(localStorage.getItem("currentUser")).id,
+                    toid: JSON.parse(localStorage.getItem("pickedHome")).id
+                })
+                console.log("sporocilo poslano")
                 
             }
         }
