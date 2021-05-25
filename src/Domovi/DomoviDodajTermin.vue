@@ -1,7 +1,7 @@
 <template>
     <div class = "urejanjeTerminov">
         <div class = "topBarProstovoljci">
-            <h1 class="headerHomeVol">Dodajanje novega termina</h1> 
+            <h1 class="headerHomeVol">Dodaj termin</h1> 
 
             <div class="dropdown">
                 <b-dropdown class=dropdownIcon text="Menu" size="lg" variant="info">

@@ -134,5 +134,29 @@
         background-color: white;
         text-align: center;
     }
+    .dodajTerminText{
+        font-size: 25px;
+        margin-right: 30vw;
+        text-align: center;
+        margin-top: 5vh;
+    }
+    .datePick{
+        height: 20%;
+        position: fixed;
+        left: 42.5vw;
+    }
+    .timeInput{
+        margin-left: 40.5vw;
+        width: 20vw;
+        height: 5vh;
+        position: relative;top:14vh;
+    }
+    .dodajTermin{
+        margin-top: 20vh;
+        margin-left: 31.5vw;
+        font-size: 25px;
+        margin-right: 30vw;
+        text-align: center;
+    }
     
 }
