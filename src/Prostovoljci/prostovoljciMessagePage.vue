@@ -2,7 +2,7 @@
     <div id = "prostovoljciMessageStil">
 
         <div class = "topBarProstovoljci">
-            <h1 class="headerHomeVol3">SPOROČILA</h1> 
+            <h1 class="headerHomeVol">SPOROČILA</h1> 
             
             <div class="dropdown">
                 <input id="dropcheck" class="dropcheck" type="checkbox">
@@ -72,7 +72,7 @@
                 var messages = data.body;
                
                 messages.forEach(message => {
-                    if(message.fromid == meId || message.fromid == toId || message.toid == meId || message.toid == toId){
+                    if(message.fromid == meId && message.toid == toId || message.fromid == toId && message.toid == meId){
                         messagesSelected.push(message);
                     }
                 });

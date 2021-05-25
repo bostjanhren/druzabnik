@@ -18,9 +18,13 @@
         </div>
 
         <div class = "underBarProstovoljciEditPage"> 
+<<<<<<< HEAD
             
             <div class="Slika">
             </div>
+=======
+
+>>>>>>> 77193c0e371a0bc1fd462e2efd65c847e5d928e5
 
             <div class="ImeEdit">
                 <input type="ImeEdit-tekst" v-model="username"  id="ImeEdit1" aria-describedby="emailHelp" placeholder=" Ime">
@@ -47,10 +51,6 @@
 
             <!--- TODO: urediti fielde in pullat info od current logged in userja in slika-->
 
-            <br>
-            <br>
-            <br>
-            <br>
             <br>
             <br>
             <br>
