@@ -2,7 +2,7 @@
     <div class = "loginHomePage">
 
         <div class = "topBarProstovoljci">
-            <h1 class="headerHomeVol">SPOROČILA</h1> 
+            <h1 class="headerHomeVol">Sporočila</h1> 
 
             <div class="dropdown">
                 <input id="dropcheck" class="dropcheck" type="checkbox">
