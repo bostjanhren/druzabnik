@@ -22,27 +22,23 @@
                     <div class="homeIzbiraText">
                     <label>{{pickedHomename}}</label>
                     </div>
+                    <br>
+                    <br>
+                    <br>
                     <div class="homeDescription">
                         <label >{{pickedHomeDescription}}</label>
                     </div>
 
                     <div class="btnODomu">
 
-                        <!--
-                        <form action="/">
-                            <button class="btnHomeSelection">
-                                Spoznaj Ekipo
-                            </button>
-                        </form>
-                        -->
                             <form @submit.prevent="contactClick">
-                                <button class="btnHomeSelection" >Pošlji sporočilo</button>
+                                <button class="btnHomeSelection5" >Pošlji sporočilo</button>
                             </form>
                         
                         
 
                         <form action="/terminiDoma">
-                            <button class="btnHomeSelection1">
+                            <button class="btnHomeSelection5">
                                 Izberi termin
                             </button>
                         </form>
