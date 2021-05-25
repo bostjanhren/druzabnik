@@ -18,29 +18,32 @@
         </div>
 
         <div class = "underBarProstovoljciEditPage"> 
-            <form>
-                <div class="Slika">
-                    <p>Prostor za dodajanje slike</p>
-                    <button>Slika</button>
-                </div>
-            </form>
+            
+            <div class="Slika">
+            </div>
 
             <div class="ImeEdit">
-                <label class= "email-text" for="exampleInputEmail1"> Ime </label>
-                <input type="uporabniskoIme" v-model="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ime">
+                <input type="ImeEdit-tekst" v-model="username"  id="ImeEdit1" aria-describedby="emailHelp" placeholder=" Ime">
             </div>
             <div class="PriimekEdit">
-                <label class= "geslo-text" for="exampleInputPassword1">Priimek</label>
-                <input type="password" v-model="password" class="form-control" id="exampleInputPassword1" placeholder="Priimek">
+                <input type="PriimekEdit-tekst" v-model="password"  id="PriimekEdit1" placeholder=" Priimek">
             </div>
-            <div class="Starost">
-                <label class= "email-text" for="exampleInputEmail1"> Starost </label>
-                <input type="uporabniskoIme" v-model="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Vnesi email">
+            <div class="StarostEdit">
+                <input type="StarostEdit-tekst" v-model="username" id="StarostEdit1" aria-describedby="emailHelp" placeholder=" Starost">
             </div>
-            <div class="Opis">
-                <label class= "geslo-text" for="exampleInputPassword1">Opis</label>
-                <input type="password" v-model="password" class="form-control" id="exampleInputPassword1" placeholder="Geslo">
+            <div class="KrajBivanjaEdit">
+                <input type="KrajBivanjaEdit-tekst" v-model="password"  id="KrajBivanjaEdit1" placeholder=" Kraj bivanja">
             </div>
+            <div class="TelStevilkaEdit">
+                <input type="TelStevilkaEdit-tekst" v-model="password"  id="TelStevilkaEdit1" placeholder=" Tel. številka">
+            </div>
+            <div class="IzobrazbaEdit">
+                <input type="IzobrazbaEdit-tekst" v-model="password"  id="IzobrazbaEdit1" placeholder=" Izobrazba, študij, ...">
+            </div>
+             <div class="OpisEdit">
+                <input type="OpisEdit-tekst" v-model="password"  id="OpisEdit1" placeholder=" Opis o sebi...">
+            </div>
+            
 
             <!--- TODO: urediti fielde in pullat info od current logged in userja in slika-->
 
@@ -53,25 +56,14 @@
             <br>
             <br>
 
-            <form>
-                <div class="form-group">
-                <button class="btn btn-primary" :disabled="loading">
-                    <span class="spinner-border spinner-border-sm" v-show="loading"></span>
-                    <span>Shrani</span>
-                </button>
-                </div>
-            </form>
+          
+            <button class='gumb' disabled="loading">
+                <span class="spinner-border spinner-border-sm" v-show="loading"></span>
+                <span>Shrani</span>
+            </button>
+    
 
             <br>
-
-            <form action="/prostovoljciDoma">
-                <div class="form-group">
-                <button class="btn btn-primary" :disabled="loading">
-                    <span class="spinner-border spinner-border-sm" v-show="loading"></span>
-                    <span>Domov</span>
-                </button>
-                </div>
-            </form>
 
         </div>
 
