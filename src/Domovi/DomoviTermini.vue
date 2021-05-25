@@ -2,8 +2,8 @@
     <div class = "urejanjeTerminov">
         <div class = "topBarDomovi">
             <h1 class="headerHome">Termini</h1> 
-
-            <div class="dropdown1">
+            
+            <div class="dropdownDom">
                 <input id="dropcheck" class="dropcheck" type="checkbox">
                 <label for="dropcheck" class="dropbtn"></label>
                 <div class="dropdown-content">

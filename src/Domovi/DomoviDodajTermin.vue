@@ -2,15 +2,17 @@
     <div class = "urejanjeTerminov">
         <div class = "topBarProstovoljci">
             <h1 class="headerHomeVol">Dodaj termin</h1> 
-
-            <div class="dropdown">
-                <b-dropdown class=dropdownIcon text="Menu" size="lg" variant="info">
-                    <b-dropdown-item href="/nabiralnikdom">Sporočila</b-dropdown-item>
-                    <b-dropdown-item href="/profilnastrandom">Profil</b-dropdown-item>
-                    <b-dropdown-item href="/domdolocitermin">Termini</b-dropdown-item>
-                    <b-dropdown-item href="/vstopnaStran">Odjava</b-dropdown-item>
-                </b-dropdown>
+            <div class="dropdown1">
+                <input id="dropcheck" class="dropcheck" type="checkbox">
+                <label for="dropcheck" class="dropbtn"></label>
+                <div class="dropdown-content">
+                    <a href="/nabiralnikdom">Sporočila</a>
+                    <a href="/profilnastrandom">Profil</a>
+                    <a href="/domdolocitermin">Termini</a>
+                    <a @click="odjavaClick">Odjava</a>
+                </div>
             </div>
+
         </div>
         <div class = "underBarProstovoljci">
             <div class="datePick">
@@ -26,7 +28,7 @@
                     {{ time }}
                 </div>
             </div>
-            <div class="dodajTermin"><button @click="dodajTermin()">DodajTermin</button></div>
+            <div ><button class="dodajTermin" @click="dodajTermin()">DodajTermin</button></div>
             
             
         </div>
@@ -35,6 +37,10 @@
 </template>
 
 <script>
+
+import { router } from '@/_helpers';
+import { authenticationService } from '@/_services';
+
     export default {
 
         data: () => ({
@@ -54,6 +60,7 @@
                     homeid: this.currentUser.id,
                     times: this.time
                 })
+                router.push('/domdolocitermin')
             }
         }
     }
