@@ -72,7 +72,7 @@
                 var messages = data.body;
                
                 messages.forEach(message => {
-                    if(message.fromid == meId || message.fromid == toId || message.toid == meId || message.toid == toId){
+                    if(message.fromid == meId && message.toid == toId || message.fromid == toId && message.toid == meId){
                         messagesSelected.push(message);
                     }
                 });
