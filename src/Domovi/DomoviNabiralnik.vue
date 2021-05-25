@@ -2,7 +2,7 @@
     <div class = "loginHomePage">
 
         <div class = "topBarProstovoljci">
-            <h1 class="headerHomeVol">O DOMU</h1> 
+            <h1 class="headerHomeVol">SPOROČILA</h1> 
 
             <div class="dropdown">
                 <input id="dropcheck" class="dropcheck" type="checkbox">
@@ -17,7 +17,6 @@
         </div>
 
         <div class = "underBarProstovoljci"> 
-            <h2>Pogovori</h2>
             <div v-for="contact in contacts" v-bind:key="contact" class="for-loop-contacts"> 
                 <div>
                     <b-button @click="contactClick(contact)" class="contactBtn" v-b-toggle="'gumbkontakt-' + contact.id">{{ contact.username }}</b-button>
@@ -37,7 +36,7 @@
         }),
         created(){
             var currentUser= JSON.parse(localStorage.getItem("currentUser"));
-            console.log(this.currentUser);
+            console.log(currentUser);
 
             this.$http.get('https://druzabnikapi.herokuapp.com/messages').then(function(data){
                 var messages = data.body;
@@ -46,9 +45,16 @@
                 var newContactsDisp = [];
                 //console.log(messages);
                 messages.forEach(function(message) {
-                    if(message.fromid == currentid){
+                    if(message.fromid == currentid || message.toid == currentid){
                         
                         var novKontakt = message.toid;
+                        if(!newContacts.includes(novKontakt)){
+                            newContacts.push(novKontakt);
+                        }
+                    }
+                    if(message.toid == currentid){
+                        
+                        var novKontakt = message.fromid;
                         if(!newContacts.includes(novKontakt)){
                             newContacts.push(novKontakt);
                         }
