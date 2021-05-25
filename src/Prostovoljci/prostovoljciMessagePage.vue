@@ -65,7 +65,7 @@
             this.to = JSON.parse(localStorage.getItem("pickedHome"));
             var toId = JSON.parse(localStorage.getItem("pickedHome")).id;
 
-            this.naslov = "DOM - " + this.to.homeName.toUpperCase();
+            this.naslov = "DOM - " + this.to.username.toUpperCase();
 
             var messagesSelected = [];
             this.$http.get('https://druzabnikapi.herokuapp.com/messages').then(function(data){
