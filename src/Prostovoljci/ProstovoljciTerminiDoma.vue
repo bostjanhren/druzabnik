@@ -24,10 +24,10 @@
                 
                 <div>
                     <b-button class="homesBtn" v-b-toggle="'accordison-' + date">{{ dateSplit(date) }}</b-button>
-                    <b-collapse :id="'accordison-' + date" :class="'accordison-' + date">
+                    <b-collapse :id="'accordison-' + date" class="dropDownTermini">
                         <div v-for="time in listTimes[index]" v-bind:key="time">
-                            <label  class= "HomeNameText">{{ time }}</label>
-                            <button>izberi ta termin</button>
+                            <button id="btnIzbiraTermina" type="submit" @click="izberiTermin(listTimes[index], date)">{{ time }}</button>
+                            
                         </div>
                         
                         <div>
@@ -90,6 +90,15 @@
                 }
                 this.listTimes = arrayWithTimes
                 this.listDates = listOfDates
+                
+            },
+            izberiTermin(timeSc,dateSc){ 
+                    /*console.log(timeSc,dateSc, "my time and date choosen")                  ma fora je da rabim id se od tega eventa 
+                    this.$http.put('https://druzabnikapi.herokuapp.com/events',{
+                    appointmentDateTime: dateSc,
+                    homeid: this.pickedHome.id,
+                    times: timeSc,
+                })*/
                 
             }
         }

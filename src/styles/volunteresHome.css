@@ -278,5 +278,18 @@ color: #173b5e;
 font-weight: 600;
 text-align: center;
 }
+#btnIzbiraTermina{
+  background-color: #41b0cd;
+  color: white;
+  margin-top: 2.5vh;
+  margin-bottom: 1.5vh;
+  width: 50vw;
+  height: 6vh;
+  border-radius: 10px;
+  border-color:white;
+}
+.dropDownTermini{
+  background-color: #487a9d;
+}
     
 }
