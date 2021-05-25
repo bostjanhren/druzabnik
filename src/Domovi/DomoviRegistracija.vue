@@ -19,7 +19,9 @@
                  <input type = "registracijaGesloDom1" v-model="password" id = "exampleRegistracijaGesloDom1" aria-describedby="registracijaGesloDomHelp" placeholder=" Geslo">
             </div>
              <label class = "pogojiUporabe">S klikom gumba "Nadaljuj" se uporabnik strinja s pogoji uporabe.</label>
-            <button id="btnRegistracijaDom" type="submit">Nadaljuj</button>
+             <div>
+               <button id="btnRegistracijaDom" type="submit">Nadaljuj</button>
+            </div>
         </form>
     </div>
   </div>

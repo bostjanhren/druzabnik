@@ -278,6 +278,8 @@
         border-color:white;
         border-radius: 6px;
         font-family: 'Inter', sans-serif;
+        border-style: solid;
+        border-width: thin;
     }
 
     #btnRegistracijaDom{

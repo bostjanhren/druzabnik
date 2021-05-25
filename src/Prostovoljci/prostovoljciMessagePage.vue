@@ -2,21 +2,11 @@
     <div id = "prostovoljciMessageStil">
 
         <div class = "topBarProstovoljci">
-            <h1 class="headerHomeVol">SPOROČILA</h1> 
-
-            <!--
-            <div class="dropdown">
-                <b-dropdown class=dropdownIcon text="" size="lg">
-                    <b-dropdown-item href="/prostovoljciDoma" >Domovi</b-dropdown-item>
-                    <b-dropdown-item href="/prostovoljciInbox">Sporočila</b-dropdown-item>
-                    <b-dropdown-item href="/prostovoljciProfile">Profil</b-dropdown-item>
-                    <b-dropdown-item @click="odjavaClick">Odjava</b-dropdown-item>
-                </b-dropdown>
-            </div>
-            -->
+            <h1 class="headerHomeVol3">SPOROČILA</h1> 
             
             <div class="dropdown">
-                <button class="dropbtn"></button>
+                <input id="dropcheck" class="dropcheck" type="checkbox">
+                <label for="dropcheck" class="dropbtn"></label>
                 <div class="dropdown-content">
                     <a href="/prostovoljciDoma">Domovi</a>
                     <a href="/prostovoljciInbox">Sporočila</a>

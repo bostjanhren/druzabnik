@@ -3,7 +3,7 @@
         width: 100vw;
         margin-top: 0.7vh;
         height: 8vh;
-        background-color: #173b5e;
+        background-color: #487a9d;
         border-color:white;
     }
     .contactBtn:hover{
@@ -17,12 +17,17 @@
         width: 100vw;
         margin-top: 0.7vh;
         height: 8vh;
-        background-color: #173b5e;
+        background-color: #487a9d;
         border-color:white;
+        font-family: 'Inter', sans-serif;
     }
     .contactBtn:hover{
         background: #41b0cd;
         cursor: pointer;
     }
     
+    .headerHomeVol3{
+        font-family: 'Inter', sans-serif;
+        font-weight: bolder;
+    }
 }
