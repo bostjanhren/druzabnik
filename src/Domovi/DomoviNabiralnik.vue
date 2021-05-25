@@ -36,7 +36,7 @@
         }),
         created(){
             var currentUser= JSON.parse(localStorage.getItem("currentUser"));
-            console.log(this.currentUser);
+            console.log(currentUser);
 
             this.$http.get('https://druzabnikapi.herokuapp.com/messages').then(function(data){
                 var messages = data.body;
@@ -45,9 +45,16 @@
                 var newContactsDisp = [];
                 //console.log(messages);
                 messages.forEach(function(message) {
-                    if(message.fromid == currentid){
+                    if(message.fromid == currentid || message.toid == currentid){
                         
                         var novKontakt = message.toid;
+                        if(!newContacts.includes(novKontakt)){
+                            newContacts.push(novKontakt);
+                        }
+                    }
+                    if(message.toid == currentid){
+                        
+                        var novKontakt = message.fromid;
                         if(!newContacts.includes(novKontakt)){
                             newContacts.push(novKontakt);
                         }

@@ -47,19 +47,142 @@
 }
 
 @media only screen and (max-width: 700px) {
-
-    .underBarProstovoljciEditPage{
-        width: 100%;
-        height: 100%;
     
-        padding-top: 20vh;
-
-        
+    .editProfile{
+        width: 100vw;
+        height: 100vh;    
+    }
+    
+    .Slika{
+        background-image: url("../resources/piktogramProfilnaSlika.png");
         background-repeat: no-repeat;
-        background-size: auto 175vh;
-        background-position: center; 
-        text-align: center;
+        top: 23.5vh;
+        margin-left: 5.5vh;
+        height: 17.5vh;
+        background-size: auto 17.5vh;
+        position: relative;
     }
 
+    ::placeholder{
+        color: #173b5e;
+    }
 
+    .underBarProstovoljciEditPage{
+        background-color: #487a9d;
+    }
+
+    .ImeEdit{
+        width: 47vw;
+        top: 27.5vh;
+        margin-left: 24.5vh;
+        position: absolute;
+    }
+
+    #ImeEdit1{
+        width: 47vw;
+        height: 4vh;
+        border-style: none;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .PriimekEdit{
+        width: 47vw;
+        top: 34vh;
+        margin-left: 24.5vh;
+        position: absolute;
+    }
+
+    #PriimekEdit1{
+        width: 47vw;
+        height: 4vh;
+        border-style: none;
+        font-family: 'Inter', sans-serif;
+        color: #487a9d;
+    }
+
+    .StarostEdit{
+        width: 31vw;
+        top: 42.5vh;
+        margin-left: 5.5vh;
+        position: absolute;
+    }
+
+    #StarostEdit1{
+        width: 31vw;
+        height: 4vh;
+        border-style: none;
+        font-family: 'Inter', sans-serif;
+    }
+    .KrajBivanjaEdit{
+        width: 47vw;
+        top: 42.5vh;
+        margin-left: 24.5vh;
+        position: absolute;
+    }
+
+    #KrajBivanjaEdit1{
+        width: 47vw;
+        height: 4vh;
+        border-style: none;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .TelStevilkaEdit{
+        width: 81vw;
+        top: 48vh;
+        margin-left: 5.5vh;
+        position: absolute;
+    }
+
+    #TelStevilkaEdit1{
+        width: 81vw;
+        height: 4vh;
+        border-style: none;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .IzobrazbaEdit{
+        width: 81vw;
+        top: 53.5vh;
+        margin-left: 5.5vh;
+        position: absolute;
+    }
+
+    #IzobrazbaEdit1{
+        width: 81vw;
+        height: 4vh;
+        border-style: none;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .OpisEdit{
+        width: 81vw;
+        top: 59vh;
+        margin-left: 5.5vh;
+        position: absolute;
+    }
+
+    #OpisEdit1{
+        width: 81vw;
+        height: 27vh;
+        border-style: none;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .gumb{
+        background-color: #41b0cd;
+        color: white;
+        position: relative;
+        top: 56.5vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 59.5vw;
+        height: 5vh;
+        border-color: white;
+        border-width: 2px;
+        border-radius: 6px;
+        font-family: 'Inter', sans-serif;
+        margin: auto;
+    }
 }
