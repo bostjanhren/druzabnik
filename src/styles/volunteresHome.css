@@ -187,6 +187,7 @@
   text-align: right;
   margin-right: 10vw;
   margin-top: -7.5vh;
+  z-index: 100;
 }
 .underBarProstovoljci{
   text-align: center;

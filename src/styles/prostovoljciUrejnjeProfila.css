@@ -61,6 +61,7 @@
         height: 17.5vh;
         background-size: auto 17.5vh;
         position: relative;
+        z-index: 0;
     }
 
     ::placeholder{
@@ -69,6 +70,7 @@
 
     .underBarProstovoljciEditPage{
         background-color: #487a9d;
+        z-index: -2;
     }
 
     .ImeEdit{
@@ -82,7 +84,6 @@
         width: 47vw;
         height: 4vh;
         border-style: none;
-        font-family: 'Inter', sans-serif;
     }
 
     .PriimekEdit{

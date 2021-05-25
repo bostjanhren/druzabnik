@@ -4,7 +4,7 @@
         <div class = "topBarDomovi">
             <h1 class="headerHome">Sporočila</h1> 
 
-            <div class="dropdownDom">
+            <div class="dropdown1">
                 <input id="dropcheck" class="dropcheck" type="checkbox">
                 <label for="dropcheck" class="dropbtn"></label>
                 <div class="dropdown-content">

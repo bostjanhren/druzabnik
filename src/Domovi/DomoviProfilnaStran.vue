@@ -4,12 +4,12 @@
         <div class = "topBarProstovoljci">
             <h1 class="headerHomeVol">O DOMU</h1> 
             
-            <div class="dropdown">
+            <div class="dropdown1">
                 <input id="dropcheck" class="dropcheck" type="checkbox">
                 <label for="dropcheck" class="dropbtn"></label>
                 <div class="dropdown-content">
                     <a href="/nabiralnikdom">Sporočila</a>
-                    <a href="/prostovoljciInbox">Profil</a>
+                    <a href="/profilnastrandom">Profil</a>
                     <a href="/domdolocitermin">Termini</a>
                     <a @click="odjavaClick">Odjava</a>
                 </div>
@@ -20,7 +20,7 @@
         <div class = "underBarDomoviEditPage"> 
             <h2 id = "domProfileTitle">PODATKI</h2>
 
-            <div class="ImeEdit">
+            <div class="ImeEdit12">
                 <textarea  rows="10" cols="30" v-model="text" id="exampleInputEmail1"  placeholder="Opis o domu ..."></textarea>
             </div>
 
