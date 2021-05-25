@@ -40,6 +40,8 @@
 </template>
 
 <script>
+import { router } from '@/_helpers';
+
     export default {
         data: () => ({
              pickedHome: "",
@@ -111,6 +113,7 @@
                     toid: JSON.parse(localStorage.getItem("pickedHome")).id
                 })
                 console.log("sporocilo poslano")
+                router.push('/prostovoljciInbox')
                 
             }
         }
