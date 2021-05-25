@@ -2,7 +2,7 @@
     <div class = "loginHomePage">
 
         <div class = "topBarProstovoljci">
-            <h1 class="headerHomeVol">O domu</h1> 
+            <h1 class="headerHomeVol">O DOMU</h1> 
 
             <div class="dropdown">
                 <input id="dropcheck" class="dropcheck" type="checkbox">
@@ -42,7 +42,7 @@
                         
 
                         <form action="/terminiDoma">
-                            <button class="btnHomeSelection">
+                            <button class="btnHomeSelection1">
                                 Izberi termin
                             </button>
                         </form>

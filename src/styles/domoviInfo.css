@@ -15,12 +15,14 @@
         color: white;
         font-weight: 600;
         text-align: center;
+        font-family: 'Inter', sans-serif;
         
       }
       .homeDescription{
         font-size: 15px;
         color: white;
         text-align: center;
+        font-family: 'Inter', sans-serif;
         
       }
       .btnODomu{
@@ -52,36 +54,70 @@
       background-repeat: no-repeat;
       background-size: auto 175vh;
       background-position: center; 
-      background-color: #173b5e;
+      background-color: #487a9d;
   }
   .homeIzbiraText{
-      font-size: 55px;
+      font-size: 20px;
       color: white;
-      font-weight: 600;
+     
+      font-weight: bolder;
       text-align: center;
+      font-family: 'Inter', sans-serif;
+      top: 2.5vh;
       
     }
     .homeDescription{
       font-size: 15px;
       color: white;
       text-align: center;
-      
+      font-weight: 200;
+      font-family: 'Inter', sans-serif;
+      top: 11vh;
+      position: relative;
     }
-    .btnODomu{
-        font-size: 15px;
-    }
+ 
     .btnHomeSelection{
-      width: 15vw;
-      height: 5vh;
-      border-radius: 10px;
-      border-color:white;
       background-color: #41b0cd;
       color: white;
-      margin-top: 3vh;
-      position: center;
+      position: relative;
+      top: 42vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 58vw;
+      height: 5vh;
+      border-color: white;
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+      margin: auto;
+      border-style: solid;
+      border-width: thin;
     }
     .btnHomeSelection:hover{
       background: #173b5e;
       cursor: pointer;
   }
+
+  .btnHomeSelection1{
+    background-color: #41b0cd;
+    color: white;
+    position: relative;
+    top: 45vh;
+    bottom: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 58vw;
+    height: 5vh;
+    border-color: white;
+    border-radius: 6px;
+    font-family: 'Inter', sans-serif;
+    margin: auto;
+    border-style: solid;
+    border-width: thin;
+  }
+  .btnHomeSelection1:hover{
+    background: #173b5e;
+    cursor: pointer;
+}
 }
