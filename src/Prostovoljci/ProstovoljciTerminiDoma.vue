@@ -104,7 +104,7 @@
                 })*/
                 console.log(JSON.parse(localStorage.getItem("currentUser")))
                 console.log(JSON.parse(localStorage.getItem("pickedHome")))
-                var message = "Pozdravljeni dom " + JSON.parse(localStorage.getItem("pickedHome")).username + " prijavil/a sem se na vaš Termin dne " + dateSc + "ob" + timeSc
+                var message = "Pozdravljeni dom " + JSON.parse(localStorage.getItem("pickedHome")).username + " prijavil/a sem se na vaš Termin dne " + dateSc + " ob " + timeSc
                 this.$http.post('https://druzabnikapi.herokuapp.com/messages',{
                     text: message,
                     fromid: JSON.parse(localStorage.getItem("currentUser")).id,
