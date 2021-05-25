@@ -1,7 +1,7 @@
 <template>
     <div class = "urejanjeTerminov">
-        <div class = "topBarProstovoljci">
-            <h1 class="headerHomeVol">Urejanje terminov za obiske</h1> 
+        <div class = "topBarDomovi">
+            <h1 class="headerHome">Termini</h1> 
 
             <div class="dropdown">
                 <b-dropdown class=dropdownIcon text="Menu" size="lg" variant="info">
@@ -10,36 +10,38 @@
                     <b-dropdown-item href="/domdolocitermin">Termini</b-dropdown-item>
                     <b-dropdown-item href="/vstopnaStran">Odjava</b-dropdown-item>
                 </b-dropdown>
-            </div>
+            </div> <!---
+            <div class="dropdownDom">
+                <input id="dropcheck" class="dropcheck" type="checkbox">
+                <label for="dropcheck" class="dropbtn"></label>
+                <div class="dropdown-content">
+                    <a href="/nabiralnikdom">Sporočila</a>
+                    <a href="/profilnastrandom">Profil</a>
+                    <a href="/domdolocitermin">Termini</a>
+                    <a @click="odjavaClick">Odjava</a>
+                </div>
+            </div>-->
         </div>
 
-        <div class = "underBarProstovoljci"> 
+        <div class = "underBarHome"> 
             {{ create2DList(blogs,currentUser.id) }}
             
             <div class ="edit-pic" @click="editDates()">
-                <div class="dodajTerminText">dodaj termin</div>
+                <div class="dodajTerminText">Dodaj termin</div>
             </div>
             <br>
             <br>
             <br>
-            <br>
-            <br>
-            <br>
-            <br>
-
 
             <div v-for="(date, index) in listDates" v-bind:key="date" class="for-loop"> 
                 
                 <div>
                     <b-button class="homesBtn" v-b-toggle="'accordison-' + date">{{ dateSplit(date) }}</b-button>
-                    <b-collapse :id="'accordison-' + date" :class="'accordison-' + date">
+                    <b-collapse :id="'accordison-' + date" class = "dropDownTermini">
                         <div v-for="time in listTimes[index]" v-bind:key="time">
-                            <label  class= "HomeNameText">{{ time }}</label>
+                            <button  id = "btnIzbiraTermina"  type="submit">{{ time }}</button>
                         </div>
-                        
-                        <div>
-                            <!--<p @click="onHomeClick(blog.homeName)" tag="button" class = "btnHomeSelect">Izberi</p>-->
-                        </div>    
+  
                     </b-collapse>
                 </div>
             </div>

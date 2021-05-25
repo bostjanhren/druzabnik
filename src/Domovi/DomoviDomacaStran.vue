@@ -16,18 +16,6 @@
             </div>
         </div>
 
-
-            <div class="dropdown">
-                <b-dropdown class=dropdownIcon text="Menu" size="lg" variant="info">
-                    <b-dropdown-item href="/nabiralnikdom">Sporočila</b-dropdown-item>
-                    <b-dropdown-item href="/profilnastrandom">Profil</b-dropdown-item>
-                    <b-dropdown-item href="/domdolocitermin">Termini</b-dropdown-item>
-                    <b-dropdown-item href="/vstopnaStran">Odjava</b-dropdown-item>
-                </b-dropdown>
-            </div>
-
-
-
         <div class = "underbar"> 
 
 
@@ -38,3 +26,23 @@
         </div>
     </div>
 </template>
+
+
+<script>
+    import { router } from '@/_helpers';
+    import { authenticationService } from '@/_services';
+    export default {
+        data(){
+            return{
+             
+            }
+        },
+        methods: {
+            odjavaClick(){
+                console.log("Odjava");
+                authenticationService.logout();
+                router.push("/vstopnaStran");
+            }
+        }
+    }
+</script>
