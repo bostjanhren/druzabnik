@@ -35,6 +35,7 @@
         background-size: auto 10vh;
         background-position: center;
         margin-left: 37.5vw;
+        z-index: -1;
     }
     .edit-pic:hover{
         cursor: pointer;

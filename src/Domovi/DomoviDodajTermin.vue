@@ -61,6 +61,12 @@ import { authenticationService } from '@/_services';
                     times: this.time
                 })
                 router.push('/domdolocitermin')
+            },
+            odjavaClick(){
+                console.log("Odjava");
+                authenticationService.logout();
+                router.push("/vstopnaStran");
+
             }
         }
     }
