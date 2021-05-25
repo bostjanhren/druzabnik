@@ -1,15 +1,15 @@
 <template>
     <div class = "loginHomePage">
 
-        <div class = "topBarProstovoljci">
-            <h1 class="headerHomeVol">O DOMU</h1> 
+        <div class = "topBarDomovi">
+            <h1 class="headerHome">Sporočila</h1> 
 
-            <div class="dropdown">
+            <div class="dropdownDom">
                 <input id="dropcheck" class="dropcheck" type="checkbox">
                 <label for="dropcheck" class="dropbtn"></label>
                 <div class="dropdown-content">
                     <a href="/nabiralnikdom">Sporočila</a>
-                    <a href="/prostovoljciInbox">Profil</a>
+                    <a href="/profilnastrandom">Profil</a>
                     <a href="/domdolocitermin">Termini</a>
                     <a @click="odjavaClick">Odjava</a>
                 </div>
@@ -17,7 +17,6 @@
         </div>
 
         <div class = "underBarProstovoljci"> 
-            <h2>Pogovori</h2>
             <div v-for="contact in contacts" v-bind:key="contact" class="for-loop-contacts"> 
                 <div>
                     <b-button @click="contactClick(contact)" class="contactBtn" v-b-toggle="'gumbkontakt-' + contact.id">{{ contact.username }}</b-button>
