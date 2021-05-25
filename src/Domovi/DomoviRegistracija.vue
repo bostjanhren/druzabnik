@@ -52,7 +52,7 @@ export default {
             console.log("done")
             authenticationService.loginHome(this.username, this.password)
                 .then(
-                    home => router.push('/domacastrandom'),
+                    home => router.push('/domdolocitermin'),
                     error => {
                       console.log("error")
                     }
