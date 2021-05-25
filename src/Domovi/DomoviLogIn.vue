@@ -44,7 +44,7 @@ export default {
             console.log("Logging in " + this.username + " " + this.password)
         authenticationService.loginHome(this.username, this.password)
             .then(
-            user => router.push('/domacastrandom'),
+            user => router.push('/domdolocitermin'),
             error => {
             console.log("error")
             }
