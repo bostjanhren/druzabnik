@@ -11,6 +11,7 @@
         height: 15vh;
         
         position: fixed;
+        z-index: 4;
         background-color: white;
         background-image: url('../resources/druzabnik_smajli_blue.png');
         background-repeat: no-repeat;
@@ -32,7 +33,7 @@
     .edit-pic{
         overflow: visible;
 
-        width: 100%;
+        width: 70%;
         height: 8vh;
         
         position: fixed;
@@ -51,7 +52,7 @@
         font-size: 20px;
         margin-right: 30vw;
         text-align: left;
-        margin-right: 10vw;
+        margin-left: 20vw;
         margin-top: 1.5vh;
     }
     .underBarHome{
@@ -125,7 +126,7 @@ textarea::placeholder {
     .underBarDomoviEditPage .btnshranidesc{
         background-color: #41b0cd;
         color: white;
-        width: 45vw;
+        width: 20vw;
         height: 4.5vh;
         border-radius: 5px;
         border-style: solid;

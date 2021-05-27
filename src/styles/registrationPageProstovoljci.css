@@ -1,28 +1,8 @@
 @media only screen and (min-width: 701px) {
     .registrationPageProstovoljci{
         width: 100vw;
-        height: 100vh;
+        height: 80vh;
         
-    }
-    .topbar{
-        overflow: visible;
-        top: 0;
-        height: 17vh;
-        position: fixed;
-        background-color: white;
-        background-repeat: no-repeat;
-        background-size: auto 25vh;
-        background-position: center;
-    }
-    
-    .underbar{
-        width: 100%;
-        height: auto;
-        padding-top: 25vh;
-        background-image: url('../resources/klopca2.jpg');
-        background-repeat: no-repeat;
-        background-size: auto 175vh;
-        background-position: center; 
     }
     .registracijaProstovoljci1{
         color: white;
@@ -48,6 +28,7 @@
 
     #exampleUporabniskoIme1{
         border-style: none;
+        width: 20vw;
     }
    
     .Ime{
@@ -65,16 +46,16 @@
     .pogojiUporabe{
         color: white;
         font-size: 11px;
-        margin-left: 58vh;
-        width: 60vw;
         top: 34vh;
+        display: flex;
+        justify-content: center;
         position: relative;
         font-family: 'Inter', sans-serif;
-        text-align: center;
     }
 
     #exampleIme1{
         border-style: none;
+        width: 20vw;
     }
 
     .GesloProstovoljci{
@@ -91,7 +72,7 @@
 
     #exampleGesloProstovoljci1{
         border-style: none;
-        
+        width: 20vw;
     }
     
     ::placeholder{
@@ -107,16 +88,16 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 30vw;
-        height: 8vh;
+        width: 20vw;
+        height: 5vh;
         border-color:white;
         border-radius: 6px;
         font-family: 'Inter', sans-serif;
+        margin: auto;
     }
 
-    #btnRegistracijaProstovoljci{
-        background: #41b0cd;
-        margin: auto;
+    #btnRegistracijaProstovoljci:hover{
+        background: #173b5e;
         cursor: pointer;
     }
 }
@@ -124,44 +105,25 @@
 @media only screen and (max-width: 700px) {
     .registrationPageProstovoljci{
         width: 100vw;
-        height: 100vh;
-        
-    }
-    .topbar{
-        overflow: visible;
-        top: 0;
-        height: 17vh;
-        position: fixed;
-        background-color: white;
-        background-repeat: no-repeat;
-        background-size: auto 25vh;
-        background-position: center;
+        height: 80vh;
     }
     
-    .underbar{
-        width: 100%;
-        height: auto;
-        padding-top: 25vh;
-        background-image: url('../resources/klopca2.jpg');
-        background-repeat: no-repeat;
-        background-size: auto 175vh;
-        background-position: center; 
-    }
     .registracijaProstovoljci1{
         color: white;
-        font-size: 22px;
+        font-size: 20px;
         font-weight: bolder;
         top: 22.8vh;
         display: flex;
         justify-content: center;
         position: relative;
         font-family: 'Inter', sans-serif;
+        padding-top: 14vh;
     }
 
     .UporabniskoIme{
         margin: auto;
         width: 41vw;
-        height: 5vh;
+        height: 4vh;
         position: relative;
         top: 24.5vh;
         display: flex;
@@ -171,12 +133,13 @@
 
     #exampleUporabniskoIme1{
         border-style: none;
+        width:40vw;
     }
    
     .Ime{
         margin: auto;
         width: 41vw;
-        height: 5vh;
+        height: 4vh;
         position: relative;
         top: 26vh;
         border-radius: 0%;
@@ -198,12 +161,13 @@
 
     #exampleIme1{
         border-style: none;
+        width:40vw;
     }
 
     .GesloProstovoljci{
         margin: auto;
         width: 41vw;
-        height: 5vh;
+        height: 4vh;
         position: relative;
         top: 27.5vh;
         justify-content: center;
@@ -214,7 +178,7 @@
 
     #exampleGesloProstovoljci1{
         border-style: none;
-        
+        width:40vw;
     }
     
     ::placeholder{
@@ -230,16 +194,18 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 59.5vw;
-        height: 5vh;
+        width:40vw;
+        height: 4vh;
         border-color:white;
         border-radius: 6px;
+        border-style: solid;
         font-family: 'Inter', sans-serif;
     }
 
-    #btnRegistracijaProstovoljci{
-        background: #41b0cd;
+    #btnRegistracijaProstovoljci:hover{
+        background: #173b5e;
         margin: auto;
         cursor: pointer;
+        width:40vw;
     }
 }

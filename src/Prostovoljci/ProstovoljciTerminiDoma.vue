@@ -1,7 +1,7 @@
 <template>
     <div class = "urejanjeTerminov">
         <div class = "topBarProstovoljci">
-            <h1 class="headerHomeVol">Termini</h1> 
+            <h1 class="headerHomeVol">TERMINI</h1> 
 
             <div class="dropdown1">
                 <input id="dropcheck" class="dropcheck" type="checkbox">

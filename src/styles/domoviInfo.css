@@ -26,8 +26,11 @@
     text-align: center;
     font-weight: 200;
     font-family: 'Inter', sans-serif;
-    top: 11vh;
+    top: 7vh;
     position: relative;
+    margin-left: 30vw;
+    margin-right: 30vw;
+    margin-bottom:15vh;
   }
 
   .btnHomeSelection{
@@ -74,6 +77,31 @@
   background: #173b5e;
   cursor: pointer;
 }
+
+.btnHomeSelection5{
+  background-color: #41b0cd;
+  color: white;
+  position: relative;
+  
+  bottom: 3vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 58vw;
+  height: 5vh;
+  border-color: white;
+  border-radius: 6px;
+  font-family: 'Inter', sans-serif;
+  margin: auto;
+  margin-top: 5vh;
+  border-style: solid;
+  border-width: thin;
+}
+.btnHomeSelection5:hover{
+  background: #173b5e;
+  cursor: pointer;
+}
+
 }
 
 @media only screen and (max-width: 700px) {
@@ -104,8 +132,10 @@
       text-align: center;
       font-weight: 200;
       font-family: 'Inter', sans-serif;
-      top: 11vh;
+      top: 7vh;
       position: relative;
+      margin-left: 10vw;
+      margin-right: 10vw;
     }
  
     .btnHomeSelection{

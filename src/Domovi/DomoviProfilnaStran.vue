@@ -18,7 +18,8 @@
         </div>
 
         <div class = "underBarDomoviEditPage"> 
-            <h2 id = "domProfileTitle">PODATKI</h2>
+
+            <br>
 
             <div class="ImeEdit12">
                 <textarea  rows="10" cols="30" v-model="text" id="exampleInputEmail1"  placeholder="Opis o domu ..."></textarea>

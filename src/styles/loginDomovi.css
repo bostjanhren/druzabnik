@@ -1,43 +1,18 @@
 @media only screen and (min-width: 701px) {
     .loginDomovi{
         width: 100vw;
-        height: 100vh;
+        height: 80vh;
         
     }
-    .topbar{
-        overflow: visible;
-        top: 0;
     
-        
-        width: 100%;
-        height: 20vh;
-        
-        position: fixed;
-        background-color: white;
-        background-image: url('../resources/druzabnik_digonala.png');
-        background-repeat: no-repeat;
-        background-size: auto 25vh;
-        background-position: center;
-    }
-    
-    .underbar{
-        width: 100%;
-        height: 100%;
-    
-        padding-top: 25vh;
-        background-image: url('../resources/main_image_klopca.jpg');
-        background-repeat: no-repeat;
-        background-size: auto 100vh;
-        background-position: center; 
-    }
     .prijavaDom{
         color: white;
-        font-size: 11px;
+        font-size: 15px;
         display: flex;
         justify-content: center;
         font-family: 'Inter', sans-serif;
         position: relative;
-        top: 18vh;
+        top: 30vh;
     }
 
     .prijavaDom1{
@@ -46,17 +21,17 @@
         font-weight: bolder;
         position: relative;
         display: flex;
-        top: 19.75vh;
+        top: 35vh;
         font-family: 'Inter', sans-serif;
         justify-content: center;
     }
 
     .E-mail{
         margin: auto;
-        width: 60vw;
-        height: 5vh;
+        width: 30vw;
+        height: 4vh;
         position: relative;
-        top: 21.5vh;
+        top: 38vh;
         justify-content: center;
         display: flex;
         font-family: 'Inter', sans-serif;
@@ -64,10 +39,10 @@
     }
     .Geslo{
         margin: auto;
-        width: 60vw;
-        height: 5vh;
+        width: 30vw;
+        height: 4vh;
         position: relative;
-        top: 23vh;
+        top: 39vh;
         justify-content: center;
         display: flex;
         font-family: 'Inter', sans-serif;
@@ -76,10 +51,12 @@
 
     #exampleInputEmail1{
         border-style: none;
+        width:20vw;
     }
 
     #exampleInputPassword1{
         border-style: none;
+        width:20vw;
     }
 
     ::placeholder{
@@ -88,25 +65,24 @@
     } 
 
     .registracija-text{
-       color: white;
-        font-size: 11px;
-        margin-left: 55vh;
-        width: 60vw;
-        top: 23vh;
-        position: relative;
+        color: white;
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
         font-family: 'Inter', sans-serif;
-        text-align: center;
+        position: relative;
+        top: 40vh;
     }
     #btnPrijava{
         background-color: #41b0cd;
         color: white;
         position: relative;
-        top: 25vh;
+        top: 40vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 30vw;
-        height: 8vh;
+        width: 20vw;
+        height: 5vh;
         border-color:white;
         border-radius: 6px;
         font-family: 'Inter', sans-serif;
@@ -119,121 +95,84 @@
     }
     #btnRegistracija{
         background-color: #41b0cd;
-    color: white;
-    position: relative;
-    top: 26.75vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30vw;
-    height: 8vh;
-    border-color:white;
-    border-radius: 6px;
-    font-family: 'Inter', sans-serif;
-    margin: auto;
+        color: white;
+        position: relative;
+        top: 43vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20vw;
+        height: 5vh;
+        border-color:white;
+        border-radius: 6px;
+        font-family: 'Inter', sans-serif;
+        margin: auto;
     }
     #btnRegistracija:hover{
         background: #173b5e;
         cursor: pointer;
     }
-    #btnNazaj{
-        background-color: #41b0cd;
-        color: white;
-        position: relative;top:-35vh;
-        margin-left: 1vw;
-        width: 10vw;
-        height: 5vh;
-        border-radius: 10px;
-        border-color:white;
-    }
-    #btnNazaj:hover{
-        background: #173b5e;
-        cursor: pointer;
-    }
+    
 }
 
 @media only screen and (max-width: 700px){
         .loginDomovi{
             width: 100vw;
-            height: 100vh;
-            
-        }
-        .topbar{
-            overflow: visible;
-            top: 0;
-        
-            
-            width: 100%;
-            height: 20vh;
-            
-            position: fixed;
-            background-color: white;
-            background-image: url('../resources/druzabnik_digonala.png');
-            background-repeat: no-repeat;
-            background-size: auto 25vh;
-            background-position: center;
+            height: 80vh;
         }
         
-        .underbar{
-            width: 100%;
-            height: 100%;
-        
-            padding-top: 25vh;
-            background-image: url('../resources/main_image_klopca.jpg');
-            background-repeat: no-repeat;
-            background-size: auto 100vh;
-            background-position: center; 
-        }
         .prijavaDom{
             color: white;
-            font-size: 11px;
-            display: flex;
-            justify-content: center;
-            font-family: 'Inter', sans-serif;
-            position: relative;
-            top: 18vh;
+        font-size: 11px;
+        display: flex;
+        justify-content: center;
+        font-family: 'Inter', sans-serif;
+        position: relative;
+        top: 30vh;
         }
 
         .prijavaDom1{
             color: white;
-            font-size: 22px;
-            font-weight: bolder;
-            position: relative;
-            display: flex;
-            top: 19.75vh;
-            font-family: 'Inter', sans-serif;
-            justify-content: center;
+        font-size: 22px;
+        font-weight: bolder;
+        position: relative;
+        display: flex;
+        top: 31vh;
+        font-family: 'Inter', sans-serif;
+        justify-content: center;
         }
 
         .E-mail{
             margin: auto;
-            width: 60vw;
-            height: 5vh;
-            position: relative;
-            top: 21.5vh;
-            justify-content: center;
-            display: flex;
-            font-family: 'Inter', sans-serif;
-            font-style: normal;
+        width: 30vw;
+        height: 4vh;
+        position: relative;
+        top: 33vh;
+        justify-content: center;
+        display: flex;
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
         }
         .Geslo{
             margin: auto;
-            width: 60vw;
-            height: 5vh;
-            position: relative;
-            top: 23vh;
-            justify-content: center;
-            display: flex;
-            font-family: 'Inter', sans-serif;
-            font-style: normal;
+        width: 30vw;
+        height: 4vh;
+        position: relative;
+        top: 34vh;
+        justify-content: center;
+        display: flex;
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
         }
 
         #exampleInputEmail1{
             border-style: none;
+        width:45vw;
         }
     
         #exampleInputPassword1{
             border-style: none;
+        width:45vw;
         }
     
         ::placeholder{
@@ -253,18 +192,19 @@
         }
         #btnPrijava{
             background-color: #41b0cd;
-            color: white;
-            position: relative;
-            top: 25vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 59.5vw;
-            height: 5vh;
-            border-color:white;
-            border-radius: 6px;
-            font-family: 'Inter', sans-serif;
-            margin: auto;
+        color: white;
+        position: relative;
+        top: 35vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45vw;
+        height: 4vh;
+        border-color:white;
+        border-style: solid;
+        border-radius: 6px;
+        font-family: 'Inter', sans-serif;
+        margin: auto;
         }
 
         #btnPrijava:hover{
@@ -273,34 +213,21 @@
         }
         #btnRegistracija{
             background-color: #41b0cd;
-        color: white;
-        position: relative;
-        top: 26.75vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 59.5vw;
-        height: 5vh;
-        border-color:white;
-        border-radius: 6px;
-        font-family: 'Inter', sans-serif;
-        margin: auto;
+            color: white;
+            position: relative;
+            top: 36vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 45vw;
+            height: 4vh;
+            border-color:white;
+            border-style: solid;
+            border-radius: 6px;
+            font-family: 'Inter', sans-serif;
+            margin: auto;
         }
         #btnRegistracija:hover{
-            background: #173b5e;
-            cursor: pointer;
-        }
-        #btnNazaj{
-            background-color: #41b0cd;
-            color: white;
-            position: relative;top:-35vh;
-            margin-left: 1vw;
-            width: 10vw;
-            height: 5vh;
-            border-radius: 10px;
-            border-color:white;
-        }
-        #btnNazaj:hover{
             background: #173b5e;
             cursor: pointer;
         }

@@ -23,8 +23,6 @@
                     <label>{{pickedHomename}}</label>
                     </div>
                     <br>
-                    <br>
-                    <br>
                     <div class="homeDescription">
                         <label >{{pickedHomeDescription}}</label>
                     </div>

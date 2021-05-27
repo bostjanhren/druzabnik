@@ -6,13 +6,13 @@
             <div class="dropdown1">
                 <input id="dropcheck" class="dropcheck" type="checkbox">
                 <label for="dropcheck" class="dropbtn"></label>
-                <!--<div class="dropdown-content">
+                <div class="dropdown-content">
                     
                     <a href="/nabiralnikdom">Sporočila</a>
                     <a href="/profilnastrandom">Profil</a>
                     <a href="/domdolocitermin">Termini</a>
                     <a @click="odjavaClick">Odjava</a>
-                </div>-->
+                </div>
             </div>
             
         </div>
@@ -62,6 +62,11 @@
             this.currentUser= JSON.parse(localStorage.getItem("currentUser"));
         },
         methods: {
+            odjavaClick(){
+                console.log("Odjava");
+                authenticationService.logout();
+                router.push("/vstopnaStran");
+            },
             dateSplit(date){
                 var res = date.split("T");
                 var res2 = res[0].split("-");
